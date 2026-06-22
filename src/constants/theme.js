@@ -98,11 +98,7 @@ export const theme = {
 
   typography: {
     fontFamily: {
-      sans: [
-        "Inter",
-        "system-ui",
-        "sans-serif",
-      ],
+      sans: ["Inter", "system-ui", "sans-serif"],
     },
 
     size: {
@@ -204,6 +200,31 @@ export const theme = {
 
     easing: {
       default: [0.22, 1, 0.36, 1],
+    },
+  },
+
+  ui: {
+    button: {
+      primary: "bg-[#FFD60A] text-slate-900 hover:opacity-90",
+
+      secondary: "bg-[#A78BFA] text-white hover:opacity-90",
+
+      outline:
+        "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50",
+
+      ghost: "bg-transparent text-slate-900 hover:bg-slate-100",
+    },
+
+    badge: {
+      default: "bg-slate-100 text-slate-700",
+
+      success: "bg-green-100 text-green-700",
+
+      warning: "bg-yellow-100 text-yellow-700",
+
+      danger: "bg-red-100 text-red-700",
+
+      info: "bg-sky-100 text-sky-700",
     },
   },
 };
