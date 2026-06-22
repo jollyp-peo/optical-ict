@@ -1,0 +1,46 @@
+import Link from "next/link";
+
+export default function Logo() {
+  return (
+    <Link
+      href="/"
+      className="
+        flex
+        items-center
+        gap-2
+      "
+    >
+      <div
+        className="
+          h-10
+          w-10
+          rounded-xl
+          bg-gradient-to-br
+          from-yellow-400
+          to-purple-400
+        "
+      />
+
+      <div>
+        <span
+          className="
+            block
+            text-sm
+            font-semibold
+          "
+        >
+          Optimal ICT
+        </span>
+
+        <span
+          className="
+            text-xs
+            text-slate-500
+          "
+        >
+          Technology Solutions
+        </span>
+      </div>
+    </Link>
+  );
+}

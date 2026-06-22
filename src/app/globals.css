@@ -43,9 +43,29 @@
 
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
 
+   /* Status */
+
+  --color-success: #22c55e;
+  --color-warning: #facc15;
+  --color-danger: #ef4444;
+  --color-info: #38bdf8;
+
+  /* Navigation */
+
+  --navbar-height: 80px;
+
   /* Layout */
 
   --container-max: 1440px;
+  --section-padding-mobile: 4rem;
+  --section-padding-desktop: 6rem;
+
+  /* Z-index */
+
+  --z-navbar: 100;
+  --z-mobile-menu: 300;
+  --z-modal: 500;
+  --z-toast: 600;
 }
 
 /* ==========================
