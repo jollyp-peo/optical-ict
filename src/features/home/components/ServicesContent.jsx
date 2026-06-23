@@ -5,14 +5,11 @@ import SectionEyebrow from "@/components/ui/SectionEyebrow";
 
 import { servicesPreview } from "@/data/home";
 
-import ServiceCard from "./ServiceCard";
-
+import ServicesShowcase from "./ServicesShowcase";
 export default function ServicesContent() {
   return (
-    <div className="max-w-xl">
-      <SectionEyebrow>
-        Technology Services
-      </SectionEyebrow>
+    <div >
+      <SectionEyebrow>Technology Services</SectionEyebrow>
 
       <h2
         className="
@@ -24,9 +21,7 @@ export default function ServicesContent() {
           lg:text-5xl
         "
       >
-        Everything You Need
-        To Keep Technology
-        Working.
+        Everything You Need To Keep Technology Working.
       </h2>
 
       <p
@@ -37,9 +32,8 @@ export default function ServicesContent() {
           text-slate-600
         "
       >
-        From repairs and support
-        to software, networking,
-        websites and mobile apps.
+        From repairs and support to software, networking, websites and mobile
+        apps.
       </p>
 
       <div
@@ -49,21 +43,12 @@ export default function ServicesContent() {
           gap-4
         "
       >
-        {servicesPreview.map(
-          (service) => (
-            <ServiceCard
-              key={service.title}
-              {...service}
-            />
-          )
-        )}
+        <ServicesShowcase services={servicesPreview} />
       </div>
 
       <div className="mt-8">
         <Link href="/services">
-          <Button size="lg">
-            Explore Services
-          </Button>
+          <Button size="lg">Explore Services</Button>
         </Link>
       </div>
     </div>
