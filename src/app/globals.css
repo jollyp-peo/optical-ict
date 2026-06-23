@@ -5,6 +5,20 @@
 ========================== */
 
 :root {
+  
+  .dark {
+    --bg-primary: #020617;
+    --bg-secondary: #0f172a;
+    --bg-tertiary: #1e293b;
+
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-muted: #94a3b8;
+
+    --border-primary: #334155;
+    --border-secondary: #475569;
+  }
+
   /* Brand */
 
   --color-primary: #ffd60a;
@@ -43,7 +57,7 @@
 
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
 
-   /* Status */
+  /* Status */
 
   --color-success: #22c55e;
   --color-warning: #facc15;
@@ -89,10 +103,7 @@ body {
 
   color: var(--text-primary);
 
-  font-family:
-    Inter,
-    system-ui,
-    sans-serif;
+  font-family: Inter, system-ui, sans-serif;
 
   text-rendering: optimizeLegibility;
 
@@ -121,12 +132,11 @@ a {
 ========================== */
 
 .text-gradient {
-  background:
-    linear-gradient(
-      135deg,
-      var(--color-primary),
-      var(--color-secondary)
-    );
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
 
   -webkit-background-clip: text;
 

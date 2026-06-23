@@ -31,7 +31,9 @@ export default function Button({
           rounded-xl
           font-medium
           transition-all
-          duration-200
+          duration-300
+          ease-out
+          active:scale-[0.98]
           disabled:pointer-events-none
           disabled:opacity-50
         `,

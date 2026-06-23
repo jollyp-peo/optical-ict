@@ -1,42 +1,38 @@
+import SectionEyebrow from "./SectionEyebrow";
+
 export default function SectionHeader({
   eyebrow,
   title,
   description,
   centered = false,
+  className = "",
 }) {
   return (
     <div
-      className={
-        centered
-          ? "mx-auto max-w-3xl text-center"
-          : "max-w-3xl"
-      }
+      className={`
+        ${
+          centered
+            ? "mx-auto max-w-3xl text-center"
+            : "max-w-3xl"
+        }
+        ${className}
+      `}
     >
       {eyebrow && (
-        <span
-          className="
-            mb-3
-            inline-block
-            rounded-full
-            bg-yellow-100
-            px-3
-            py-1
-            text-sm
-            font-medium
-            text-yellow-700
-          "
-        >
-          {eyebrow}
-        </span>
+        <div className="mb-4">
+          <SectionEyebrow>
+            {eyebrow}
+          </SectionEyebrow>
+        </div>
       )}
 
       <h2
         className="
-          text-3xl
+          text-4xl
           font-bold
           tracking-tight
-          text-slate-900
-          lg:text-5xl
+          text-slate-950
+          lg:text-6xl
         "
       >
         {title}
@@ -45,8 +41,9 @@ export default function SectionHeader({
       {description && (
         <p
           className="
-            mt-4
+            mt-6
             text-lg
+            leading-8
             text-slate-600
           "
         >

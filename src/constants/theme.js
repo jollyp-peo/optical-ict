@@ -205,13 +205,34 @@ export const theme = {
 
   ui: {
     button: {
-      primary: "bg-[#FFD60A] text-slate-900 hover:opacity-90",
-
+      primary: `
+      bg-[#FFD60A]
+      text-slate-900
+    
+      hover:-translate-y-0.5
+      hover:shadow-xl
+      hover:brightness-95
+    
+      transition-all
+      duration-300
+      `,
       secondary: "bg-[#A78BFA] text-white hover:opacity-90",
 
-      outline:
-        "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50",
-
+      outline: `
+      border
+      border-slate-300
+      bg-white
+      text-slate-900
+      
+      hover:border-purple-300
+      hover:bg-purple-50
+      hover:text-purple-700
+      
+      hover:-translate-y-0.5
+      
+      transition-all
+      duration-300
+      `,
       ghost: "bg-transparent text-slate-900 hover:bg-slate-100",
     },
 

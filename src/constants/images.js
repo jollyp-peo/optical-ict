@@ -2,32 +2,22 @@ export const images = {
   logo: "/images/logo.svg",
 
   hero: {
-    laptopRepair:
-      "/images/hero/laptop-repair.jpg",
+    light: "/images/hero/hero-light.webp",
 
-    mobileRepair:
-      "/images/hero/mobile-repair.jpg",
-
-    itSupport:
-      "/images/hero/it-support.jpg",
+    dark: "/images/hero/hero-dark.webp",
   },
 
   services: {
-    laptopRepair:
-      "/images/services/laptop-repair.jpg",
+    laptopRepair: "/images/services/laptop-repair.jpg",
 
-    mobileRepair:
-      "/images/services/mobile-repair.jpg",
+    mobileRepair: "/images/services/mobile-repair.jpg",
 
-    networking:
-      "/images/services/networking.jpg",
+    networking: "/images/services/networking.jpg",
 
-    development:
-      "/images/services/development.jpg",
+    development: "/images/services/hero-dark.webp",
   },
 
   testimonials: {
-    placeholder:
-      "/images/testimonials/customer.jpg",
+    placeholder: "/images/testimonials/customer.jpg",
   },
 };
