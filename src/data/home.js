@@ -181,3 +181,41 @@ export const servicesPreview = [
     ctaLabel: "Request Networking Service",
   },
 ];
+
+export const processSteps = [
+  {
+    number: "01",
+
+    title: "Request Service",
+
+    description:
+      "Book a repair, request IT support, or start a development project through our platform.",
+  },
+
+  {
+    number: "02",
+
+    title: "Diagnosis & Planning",
+
+    description:
+      "Our team evaluates requirements, diagnoses issues and provides recommendations.",
+  },
+
+  {
+    number: "03",
+
+    title: "Execution",
+
+    description:
+      "Repairs, support activities or development work are carried out by our specialists.",
+  },
+
+  {
+    number: "04",
+
+    title: "Delivery & Ongoing Support",
+
+    description:
+      "Receive your completed project, repaired device or continued technical support.",
+  },
+];
