@@ -54,11 +54,9 @@ export const servicesPreview = [
   {
     id: "laptop-repair",
     title: "Laptop Repair",
-    shortDescription:
-      "Diagnostics, upgrades and hardware repairs.",
-    
-    image:
-      "/images/services/laptop-repair.webp",
+    shortDescription: "Diagnostics, upgrades and hardware repairs.",
+
+    image: "/images/services/laptop-repair.webp",
 
     description:
       "Professional diagnostics, motherboard repairs, SSD upgrades, RAM upgrades, cooling system maintenance and complete laptop restoration services.",
@@ -76,10 +74,8 @@ export const servicesPreview = [
   {
     id: "mobile-repair",
     title: "Mobile Repair",
-    shortDescription:
-      "Screen, battery and board repairs.",
-    image:
-      "/images/services/mobile-phone-repair.webp",
+    shortDescription: "Screen, battery and board repairs.",
+    image: "/images/services/mobile-phone-repair.webp",
 
     description:
       "Screen replacement, battery replacement, charging issues, water damage recovery and advanced motherboard repair services.",
@@ -97,10 +93,8 @@ export const servicesPreview = [
   {
     id: "website-development",
     title: "Website Development",
-    shortDescription:
-      "Modern websites built for growth.",
-    image:
-      "/images/services/webservice.webp",
+    shortDescription: "Modern websites built for growth.",
+    image: "/images/services/webservice.webp",
 
     description:
       "Business websites, landing pages, e-commerce platforms, Fintech and custom web applications optimized for performance and conversions.",
@@ -118,11 +112,9 @@ export const servicesPreview = [
   {
     id: "mobile-app-development",
     title: "Mobile App Development",
-    shortDescription:
-      "Cross-platform applications.",
+    shortDescription: "Cross-platform applications.",
 
-    image:
-      "/images/services/app-service.webp",
+    image: "/images/services/app-service.webp",
 
     description:
       "Modern Android and iOS applications using scalable technologies and enterprise-grade architecture.",
@@ -140,11 +132,9 @@ export const servicesPreview = [
   {
     id: "corporate-it",
     title: "Corporate IT Support",
-    shortDescription:
-      "Managed services for organizations.",
+    shortDescription: "Managed services for organizations.",
 
-    image:
-      "/images/services/corporate-it-support.webp",
+    image: "/images/services/corporate-it-support.webp",
 
     description:
       "Helpdesk support, infrastructure monitoring, security management and proactive IT maintenance for businesses.",
@@ -162,11 +152,9 @@ export const servicesPreview = [
   {
     id: "networking",
     title: "Networking",
-    shortDescription:
-      "Infrastructure and connectivity.",
+    shortDescription: "Infrastructure and connectivity.",
 
-    image:
-     "/images/services/it-support.webp",
+    image: "/images/services/it-support.webp",
 
     description:
       "Office network setup, WiFi deployment, firewall configuration, structured cabling and network optimization.",
@@ -219,3 +207,48 @@ export const processSteps = [
       "Receive your completed project, repaired device or continued technical support.",
   },
 ];
+
+export const whyChooseUs = {
+  title: "Technology Solutions Built Around Reliability.",
+
+  description:
+    "We combine technical expertise, responsive support and transparent communication to deliver solutions that businesses and individuals can trust.",
+
+  features: [
+    {
+      title: "Fast Turnaround",
+      description: "Quick diagnostics, repairs and project delivery.",
+      icon: "lightning",
+    },
+
+    {
+      title: "Pickup & Delivery",
+      description: "Convenient device collection and return services.",
+      icon: "truck",
+    },
+
+    {
+      title: "Certified Specialists",
+      description: "Experienced professionals handling every project.",
+      icon: "shield",
+    },
+
+    {
+      title: "Transparent Pricing",
+      description: "Clear estimates with no hidden charges.",
+      icon: "money",
+    },
+
+    {
+      title: "Ongoing Support",
+      description: "Post-delivery support and maintenance options.",
+      icon: "support",
+    },
+
+    {
+      title: "Quality Guarantee",
+      description: "Confidence backed by service warranties.",
+      icon: "award",
+    },
+  ],
+};
