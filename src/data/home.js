@@ -252,3 +252,25 @@ export const whyChooseUs = {
     },
   ],
 };
+
+export const companyStats = [
+  {
+    value: "500+",
+    label: "Devices Repaired",
+  },
+
+  {
+    value: "120+",
+    label: "Projects Delivered",
+  },
+
+  {
+    value: "98%",
+    label: "Client Satisfaction",
+  },
+
+  {
+    value: "24/7",
+    label: "Technical Support",
+  },
+];
