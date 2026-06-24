@@ -499,3 +499,33 @@ export const faqs = [
       "You can contact us directly through the website, submit a service request or schedule a consultation.",
   },
 ];
+
+export const ctaActions = [
+  {
+    title: "Book Device Repair",
+    description:
+      "Laptop, desktop and mobile repairs.",
+    href: "/repairs",
+  },
+
+  {
+    title: "Request Pickup",
+    description:
+      "Schedule device pickup and delivery.",
+    href: "/pickup",
+  },
+
+  {
+    title: "Start A Website Project",
+    description:
+      "Business websites and web applications.",
+    href: "/projects",
+  },
+
+  {
+    title: "Get IT Support",
+    description:
+      "Managed services and technical assistance.",
+    href: "/support",
+  },
+];
