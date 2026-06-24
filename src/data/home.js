@@ -455,3 +455,47 @@ export const testimonials = [
       "Quick and reliable repair service. They recovered all my data from a crashed hard drive. I am truly grateful.",
   },
 ];
+
+export const faqs = [
+  {
+    question:
+      "How long do most repairs take?",
+    answer:
+      "Most device repairs are completed within 24 to 72 hours depending on complexity and parts availability.",
+  },
+
+  {
+    question:
+      "Do you offer device pickup and delivery?",
+    answer:
+      "Yes. We provide pickup and delivery services for customers within our service coverage areas.",
+  },
+
+  {
+    question:
+      "Do repairs come with a warranty?",
+    answer:
+      "Yes. Eligible repairs include service warranties for added peace of mind.",
+  },
+
+  {
+    question:
+      "Can you develop custom websites and applications?",
+    answer:
+      "Absolutely. We build websites, business platforms, e-commerce solutions and mobile applications tailored to your needs.",
+  },
+
+  {
+    question:
+      "Do you provide ongoing IT support?",
+    answer:
+      "Yes. We offer managed IT services, maintenance plans and ongoing technical support for businesses.",
+  },
+
+  {
+    question:
+      "How do I request a quote?",
+    answer:
+      "You can contact us directly through the website, submit a service request or schedule a consultation.",
+  },
+];
