@@ -1,6 +1,7 @@
 import Container from "@/components/layout/Container";
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
+import MobileMenu from "./MobileMenu";
 import Button from "@/components/ui/Button";
 
 export default function Navbar() {
@@ -28,6 +29,7 @@ export default function Navbar() {
           <Logo />
 
           <NavLinks />
+          <MobileMenu />
 
           <div
             className="

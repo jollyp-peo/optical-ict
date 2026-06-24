@@ -7,36 +7,74 @@ export const publicNavigation = [
   {
     label: "Services",
     href: "/services",
+
+    children: [
+      {
+        label: "Laptop Repair",
+        href: "/services/laptop-repair",
+      },
+
+      {
+        label: "Phone Repair",
+        href: "/services/phone-repair",
+      },
+
+      {
+        label: "Website Development",
+        href: "/services/website-development",
+      },
+
+      {
+        label: "Mobile App Development",
+        href: "/services/mobile-app-development",
+      },
+
+      {
+        label: "Networking",
+        href: "/services/networking",
+      },
+
+      {
+        label: "Corporate IT Support",
+        href: "/services/corporate-it-support",
+      },
+
+      {
+        label: "Managed IT Services",
+        href: "/services/managed-it-services",
+      },
+    ],
   },
 
   {
-    label: "Repair Booking",
-    href: "/repair-booking",
+    label: "Projects",
+    href: "/projects",
   },
 
   {
-    label: "Track Device",
-    href: "/track-device",
-  },
+    label: "Company",
 
-  {
-    label: "IT Support",
-    href: "/it-support",
-  },
+    children: [
+      {
+        label: "About Us",
+        href: "/about",
+      },
 
-  {
-    label: "Development",
-    href: "/development",
-  },
+      {
+        label: "Testimonials",
+        href: "/testimonials",
+      },
 
-  {
-    label: "Portfolio",
-    href: "/portfolio",
-  },
+      {
+        label: "FAQs",
+        href: "/faq",
+      },
 
-  {
-    label: "Blog",
-    href: "/blog",
+      {
+        label: "Blog",
+        href: "/blog",
+      },
+    ],
   },
 
   {
