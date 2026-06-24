@@ -372,3 +372,86 @@ export const featuredProjects = [
     ctaLabel: "View Project",
   },
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Chukwuemeka Okonkwo",
+    role: "Customer",
+    company: "TechBridge Ltd",
+    quote:
+      "The team transformed our outdated website into a modern platform that significantly improved our lead generation.",
+  },
+  {
+    id: 2,
+    name: "Adaeze Nwosu",
+    role: "Customer",
+    company: "Prime Logistics",
+    quote:
+      "Professional, responsive and highly skilled. Their support has become an extension of our internal IT department.",
+  },
+  {
+    id: 3,
+    name: "Olumide Adeyemi",
+    role: "Client",
+    company: "Future Commerce",
+    quote:
+      "From planning to delivery, the entire process was transparent and efficient.",
+  },
+  {
+    id: 4,
+    name: "Grace Okafor",
+    role: "Customer",
+    company: "GT Ventures",
+    quote:
+      "Their repair service saved us from significant downtime. Fast turnaround and excellent communication.",
+  },
+  {
+    id: 5,
+    name: "Babatunde Ogunlesi",
+    role: "Client",
+    company: "Lagos Digital Solutions",
+    quote:
+      "They delivered our e-commerce platform ahead of schedule. The attention to detail and user experience was outstanding.",
+  },
+  {
+    id: 6,
+    name: "Ngozi Eze",
+    role: "Customer",
+    company: "Abuja Tech Hub",
+    quote:
+      "My laptop was fixed within 24 hours. The technicians were knowledgeable and the pricing was very fair.",
+  },
+  {
+    id: 7,
+    name: "Emmanuel Obi",
+    role: "Client",
+    company: "Port Harcourt Innovations",
+    quote:
+      "We hired them for a complete network overhaul. The project was executed flawlessly with minimal disruption to our operations.",
+  },
+  {
+    id: 8,
+    name: "Fatima Bello",
+    role: "Customer",
+    company: "Kano Business Centre",
+    quote:
+      "Excellent repair service! They diagnosed and fixed my server issues when two other companies couldn't figure it out.",
+  },
+  {
+    id: 9,
+    name: "Chinedu Nwachukwu",
+    role: "Client",
+    company: "Enugu Software Systems",
+    quote:
+      "The mobile app they built for us has received fantastic feedback from our users. Highly recommend their development team.",
+  },
+  {
+    id: 10,
+    name: "Amina Yusuf",
+    role: "Customer",
+    company: "Ibadan Creative Agency",
+    quote:
+      "Quick and reliable repair service. They recovered all my data from a crashed hard drive. I am truly grateful.",
+  },
+];
