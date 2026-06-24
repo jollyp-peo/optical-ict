@@ -24,9 +24,9 @@ export default function HomePage() {
 
       <StatsSection />
 
-      <TestimonialsSection />
-
       <ProjectsSection />
+
+      <TestimonialsSection />
 
       <FAQSection />
 

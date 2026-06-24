@@ -274,3 +274,101 @@ export const companyStats = [
     label: "Technical Support",
   },
 ];
+
+export const featuredProjects = [
+  {
+    id: 1,
+
+    title: "Corporate Website Redesign",
+
+    category: "Website Development",
+
+    image: "/images/projects/corporate.webp",
+
+    description:
+      "Modern business website redesign focused on performance, SEO visibility, user experience, and lead generation. The project transformed an outdated online presence into a high-converting digital platform.",
+
+    results: [
+      {
+        metric: "+120%",
+        label: "Lead Generation",
+      },
+
+      {
+        metric: "+65%",
+        label: "Performance Score",
+      },
+
+      {
+        metric: "+40%",
+        label: "Conversion Rate",
+      },
+    ],
+
+    ctaLabel: "View Project",
+  },
+
+  {
+    id: 2,
+
+    title: "Inventory Management System",
+
+    category: "Business Software",
+
+    image: "/images/projects/inventory.webp",
+
+    description:
+      "Custom inventory and operations platform designed to automate stock management, reporting, and internal workflows for improved operational efficiency.",
+
+    results: [
+      {
+        metric: "50%",
+        label: "Faster Workflow",
+      },
+
+      {
+        metric: "100%",
+        label: "Real-Time Reporting",
+      },
+
+      {
+        metric: "80%",
+        label: "Process Automation",
+      },
+    ],
+
+    ctaLabel: "View Project",
+  },
+
+  {
+    id: 3,
+
+    title: "Enterprise Network Deployment",
+
+    category: "Networking",
+
+    image: "/images/projects/network.webp",
+
+    description:
+      "Complete enterprise-grade network deployment including secure connectivity, infrastructure monitoring, firewall configuration, and scalability planning.",
+
+    results: [
+      {
+        metric: "99.9%",
+        label: "Network Uptime",
+      },
+
+      {
+        metric: "100%",
+        label: "Secure Access",
+      },
+
+      {
+        metric: "24/7",
+        label: "Monitoring",
+      },
+    ],
+
+    ctaLabel: "View Project",
+  },
+];

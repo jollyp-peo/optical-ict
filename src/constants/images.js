@@ -2,7 +2,7 @@ export const images = {
   logo: "/images/logo.svg",
 
   hero: {
-    light: "/images/hero/hero-light.webp",
+    light: "/images/hero/hero-main.webp",
 
     dark: "/images/hero/hero-dark.webp",
   },
