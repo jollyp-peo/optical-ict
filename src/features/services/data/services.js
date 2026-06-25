@@ -1,199 +1,162 @@
 export const services = [
   {
-    id: 1,
-
-    slug: "computer-repair",
+    id: "computer-repair",
 
     title: "Computer Repair",
 
+    category: "Repair Services",
+
+    bookingType: "repair",
+
+    serviceType: "computer",
+
     shortDescription:
-      "Professional laptop and desktop diagnostics, repairs and upgrades.",
-
-    description:
-      "We diagnose and repair hardware, software and performance issues for businesses and individuals.",
-
-    icon: "Laptop",
-
-    image:
-      "/images/services/laptop-repair.webp",
+      "Professional diagnosis, repair, maintenance, and performance optimization for laptops and desktop computers.",
 
     benefits: [
       "Hardware Repairs",
-      "Software Troubleshooting",
+      "Virus & Malware Removal",
       "Data Recovery",
-      "Performance Optimization",
     ],
 
-    process: [
-      "Device Assessment",
-      "Diagnosis",
-      "Repair & Testing",
-      "Delivery",
-    ],
+    cta: "Book Computer Repair",
   },
 
   {
-    id: 2,
+    id: "mobile-repair",
 
-    slug: "networking",
+    title: "Mobile Phone Repair",
+
+    category: "Repair Services",
+
+    bookingType: "repair",
+
+    serviceType: "mobile",
+
+    shortDescription:
+      "Fast and reliable smartphone repair services including screen replacement, charging issues, battery replacement, and software troubleshooting.",
+
+    benefits: [
+      "Screen Replacement",
+      "Battery Replacement",
+      "Software Repair",
+    ],
+
+    cta: "Book Phone Repair",
+  },
+
+  {
+    id: "web-development",
+
+    title: "Website Development",
+
+    category: "Development",
+
+    bookingType: "development",
+
+    serviceType: "website",
+
+    shortDescription:
+      "Modern business websites, corporate platforms, e-commerce solutions, and custom web applications built for growth.",
+
+    benefits: [
+      "Business Websites",
+      "E-Commerce Solutions",
+      "Custom Web Applications",
+    ],
+
+    cta: "Book Website Project",
+  },
+
+  {
+    id: "mobile-development",
+
+    title: "Mobile App Development",
+
+    category: "Development",
+
+    bookingType: "development",
+
+    serviceType: "mobile-app",
+
+    shortDescription:
+      "Cross-platform mobile applications designed for performance, scalability, and exceptional user experience.",
+
+    benefits: [
+      "Android & iOS Apps",
+      "Business Applications",
+      "Real-Time Features",
+    ],
+
+    cta: "Book App Project",
+  },
+
+  {
+    id: "networking",
 
     title: "Networking Solutions",
 
+    category: "Business IT",
+
+    bookingType: "it",
+
+    serviceType: "networking",
+
     shortDescription:
-      "Secure and scalable network infrastructure for modern businesses.",
-
-    description:
-      "Enterprise-grade network design, deployment and maintenance services.",
-
-    icon: "Network",
-
-    image:
-      "/images/services/it-support.webp",
+      "Secure and scalable network infrastructure for offices, schools, and organizations with reliable connectivity.",
 
     benefits: [
       "Network Design",
-      "WiFi Deployment",
-      "Security Hardening",
-      "Monitoring",
+      "Wi-Fi Deployment",
+      "Network Security",
     ],
 
-    process: [
-      "Site Survey",
-      "Design",
-      "Deployment",
-      "Support",
-    ],
+    cta: "Book Networking Service",
   },
 
   {
-    id: 3,
+    id: "managed-it",
 
-    slug: "web-development",
+    title: "Managed IT Support",
 
-    title: "Web Development",
+    category: "Business IT",
 
-    shortDescription:
-      "Modern, high-performance websites and web applications.",
+    bookingType: "it",
 
-    description:
-      "Custom websites, portals and enterprise applications built for growth.",
-
-    icon: "Code",
-
-    image:
-      "/images/services/webservice.webp",
-
-    benefits: [
-      "Next.js Development",
-      "SEO Optimization",
-      "Performance Focus",
-      "CMS Integration",
-    ],
-
-    process: [
-      "Discovery",
-      "Design",
-      "Development",
-      "Launch",
-    ],
-  },
-
-  {
-    id: 4,
-
-    slug: "mobile-development",
-
-    title: "Mobile Development",
+    serviceType: "managed-it",
 
     shortDescription:
-      "Cross-platform mobile apps for Android and iOS.",
-
-    description:
-      "Beautiful and scalable mobile applications built for business growth.",
-
-    icon: "DeviceMobile",
-
-    image:
-      "/images/services/app-service.webp",
-
-    benefits: [
-      "Android Apps",
-      "iOS Apps",
-      "React Native",
-      "API Integration",
-    ],
-
-    process: [
-      "Planning",
-      "Design",
-      "Development",
-      "Publishing",
-    ],
-  },
-
-  {
-    id: 5,
-
-    slug: "it-support",
-
-    title: "IT Support",
-
-    shortDescription:
-      "Managed IT support services for organizations of all sizes.",
-
-    description:
-      "Proactive monitoring, troubleshooting and support for business systems.",
-
-    icon: "Headset",
-
-    image:
-      "/images/services/corporate-it-support.webp",
+      "Comprehensive IT management, proactive monitoring, maintenance, and technical support for businesses.",
 
     benefits: [
       "Remote Support",
       "On-Site Support",
-      "System Monitoring",
-      "Maintenance",
+      "Cybersecurity Protection",
     ],
 
-    process: [
-      "Assessment",
-      "Setup",
-      "Monitoring",
-      "Optimization",
-    ],
+    cta: "Book IT Support",
   },
 
   {
-    id: 6,
-
-    slug: "cloud-solutions",
+    id: "cloud-solutions",
 
     title: "Cloud Solutions",
 
+    category: "Business IT",
+
+    bookingType: "it",
+
+    serviceType: "cloud",
+
     shortDescription:
-      "Cloud migration, hosting and infrastructure management.",
-
-    description:
-      "Secure cloud solutions that improve reliability and scalability.",
-
-    icon: "Cloud",
-
-    image:
-      "/images/services/cloud-solutions.webp",
+      "Cloud migration, backup strategies, infrastructure optimization, and secure cloud services for modern businesses.",
 
     benefits: [
       "Cloud Migration",
-      "Infrastructure Setup",
-      "Backups",
-      "Security",
+      "Backup & Recovery",
+      "Cloud Security",
     ],
 
-    process: [
-      "Audit",
-      "Migration",
-      "Deployment",
-      "Management",
-    ],
+    cta: "Book Cloud Consultation",
   },
 ];

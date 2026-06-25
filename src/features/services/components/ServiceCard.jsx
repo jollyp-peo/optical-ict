@@ -1,89 +1,161 @@
-import Link from "next/link";
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle } from "@phosphor-icons/react";
 
 import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
+import GlassCard from "@/components/marketing/GlassCard";
 
 export default function ServiceCard({
   service,
 }) {
+  const benefits =
+    service.benefits?.slice(0, 3) ?? [];
+
   return (
-    <Card
-      className="
-        group
-
-        flex
-        flex-col
-
-        transition-all
-        duration-300
-
-        hover:-translate-y-2
-        hover:shadow-xl
-      "
+    <motion.div
+      whileHover={{ y: -6 }}
+      transition={{
+        duration: 0.25,
+      }}
+      className="h-full"
     >
-      <h3
+      <GlassCard
         className="
-          text-2xl
-          font-bold
-          theme-text
-        "
-      >
-        {service.title}
-      </h3>
-
-      <p
-        className="
-          mt-4
-
-          leading-7
-
-          theme-text-secondary
-        "
-      >
-        {service.shortDescription}
-      </p>
-
-      <div
-        className="
-          mt-6
-
           flex
-          flex-wrap
-          gap-2
+          h-full
+          flex-col
+
+          p-8
         "
       >
-        {service.benefits
-          .slice(0, 3)
-          .map((benefit) => (
-            <span
-              key={benefit}
-              className="
-                rounded-full
+        {/* Category */}
 
-                bg-purple-50
+        {service.category && (
+          <span
+            className="
+              inline-flex
+              w-fit
 
-                px-3
-                py-1
+              rounded-full
 
-                text-sm
+              bg-primary/10
 
-                text-purple-700
-              "
-            >
-              {benefit}
-            </span>
-          ))}
-      </div>
+              px-3
+              py-1.5
 
-      <div className="mt-8">
-        <Link
-          href={`/services/${service.slug}`}
+              text-sm
+              font-medium
+
+              text-primary
+            "
+          >
+            {service.category}
+          </span>
+        )}
+
+        {/* Title */}
+
+        <h3
+          className="
+            mt-5
+
+            text-2xl
+            font-bold
+
+            tracking-tight
+
+            text-slate-950
+          "
         >
-          <Button fullWidth>
-            Learn More
+          {service.title}
+        </h3>
+
+        {/* Description */}
+
+        <p
+          className="
+            mt-4
+
+            flex-1
+
+            leading-7
+
+            text-slate-600
+          "
+        >
+          {service.shortDescription}
+        </p>
+
+        {/* Benefits */}
+
+        {!!benefits.length && (
+          <div
+            className="
+              mt-8
+
+              space-y-3
+            "
+          >
+            {benefits.map((benefit, index) => {
+              const title =
+                typeof benefit === "string"
+                  ? benefit
+                  : benefit.title;
+
+              return (
+                <div
+                  key={title ?? index}
+                  className="
+                    flex
+                    items-start
+
+                    gap-3
+                  "
+                >
+                  <CheckCircle
+                    size={18}
+                    weight="fill"
+                    className="
+                      mt-1
+                      shrink-0
+
+                      text-primary
+                    "
+                  />
+
+                  <span
+                    className="
+                      text-sm
+
+                      text-slate-700
+                    "
+                  >
+                    {title}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* CTA */}
+
+        <div className="mt-10">
+          <Button
+            href={`/services/${service.slug}`}
+            fullWidth
+            rightIcon={
+              <ArrowRight
+                size={18}
+                weight="bold"
+              />
+            }
+          >
+            book a service now
           </Button>
-        </Link>
-      </div>
-    </Card>
+        </div>
+      </GlassCard>
+    </motion.div>
   );
 }
