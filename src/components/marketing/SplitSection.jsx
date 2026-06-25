@@ -1,4 +1,4 @@
-export default function FeatureSplit({
+export default function SplitSection({
   content,
   media,
   reverse = false,

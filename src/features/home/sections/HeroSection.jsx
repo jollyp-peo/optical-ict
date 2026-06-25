@@ -1,13 +1,12 @@
 import Section from "@/components/layout/Section";
-import FeatureSplit from "@/components/layout/FeatureSplit";
-
 import HeroContent from "../components/HeroContent";
 import HeroVisual from "../components/HeroVisual";
+import SplitSection from "@/components/marketing/SplitSection";
 
 export default function HeroSection() {
   return (
     <Section>
-      <FeatureSplit
+      <SplitSection
         content={<HeroContent />}
         media={<HeroVisual />}
       />
