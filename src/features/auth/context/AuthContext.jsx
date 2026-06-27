@@ -23,6 +23,10 @@ export function AuthProvider({ children }) {
     setAccessToken(null);
   }
 
+  function finishInitialization() {
+  setIsInitializing(false);
+}
+
   const value = useMemo(
     () => ({
       user,
@@ -41,7 +45,7 @@ export function AuthProvider({ children }) {
 
       setAccessToken,
 
-      setIsInitializing,
+      finishInitialization,
     }),
 
     [user, accessToken, isInitializing],

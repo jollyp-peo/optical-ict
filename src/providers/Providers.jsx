@@ -14,31 +14,38 @@ import {
   AuthProvider,
 } from "@/features/auth/context/AuthContext";
 
+import AuthInitializer from "@/features/auth/components/AuthInitializer";
+
+
 export default function Providers({
   children,
 }) {
   return (
     <QueryProvider>
 
-    <ThemeProvider>
+  <ThemeProvider>
 
-        <NotificationProvider>
+    <NotificationProvider>
 
-            <AuthProvider>
+      <AuthProvider>
 
-                <BookingProvider>
+        <AuthInitializer>
 
-                    {children}
+          <BookingProvider>
 
-                    <BookingModal/>
+            {children}
 
-                </BookingProvider>
+            <BookingModal />
 
-            </AuthProvider>
+          </BookingProvider>
 
-        </NotificationProvider>
+        </AuthInitializer>
 
-    </ThemeProvider>
+      </AuthProvider>
+
+    </NotificationProvider>
+
+  </ThemeProvider>
 
 </QueryProvider>
   );
