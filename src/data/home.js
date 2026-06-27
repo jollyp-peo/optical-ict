@@ -8,12 +8,10 @@ export const heroContent = {
 
   primaryCta: {
     label: "Book Repair",
-    href: "/repair-booking",
   },
 
   secondaryCta: {
     label: "Get A Quote",
-    href: "/development",
   },
 
   trustIndicators: [
@@ -503,29 +501,26 @@ export const faqs = [
 export const ctaActions = [
   {
     title: "Book Device Repair",
-    description:
-      "Laptop, desktop and mobile repairs.",
-    href: "/repairs",
+    description: "Laptop, desktop and mobile repairs.",
+    bookingType: "repair",
   },
 
   {
     title: "Request Pickup",
-    description:
-      "Schedule device pickup and delivery.",
-    href: "/pickup",
+    description: "Schedule device pickup and delivery.",
+    bookingType: "repair",
+    pickup: true,
   },
 
   {
     title: "Start A Website Project",
-    description:
-      "Business websites and web applications.",
-    href: "/projects",
+    description: "Business websites and web applications.",
+    bookingType: "service",
   },
 
   {
     title: "Get IT Support",
-    description:
-      "Managed services and technical assistance.",
-    href: "/support",
+    description: "Managed services and technical assistance.",
+    bookingType: "service",
   },
 ];

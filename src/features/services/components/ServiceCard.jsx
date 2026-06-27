@@ -5,12 +5,12 @@ import { ArrowRight, CheckCircle } from "@phosphor-icons/react";
 
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/marketing/GlassCard";
+import useBooking from "@/features/booking/hooks/useBooking";
 
-export default function ServiceCard({
-  service,
-}) {
-  const benefits =
-    service.benefits?.slice(0, 3) ?? [];
+export default function ServiceCard({ service }) {
+  const benefits = service.benefits?.slice(0, 3) ?? [];
+
+  const { openBooking } = useBooking();
 
   return (
     <motion.div
@@ -99,9 +99,7 @@ export default function ServiceCard({
           >
             {benefits.map((benefit, index) => {
               const title =
-                typeof benefit === "string"
-                  ? benefit
-                  : benefit.title;
+                typeof benefit === "string" ? benefit : benefit.title;
 
               return (
                 <div
@@ -143,16 +141,11 @@ export default function ServiceCard({
 
         <div className="mt-10">
           <Button
-            href={`/services/${service.slug}`}
             fullWidth
-            rightIcon={
-              <ArrowRight
-                size={18}
-                weight="bold"
-              />
-            }
+            rightIcon={<ArrowRight size={18} weight="bold" />}
+            onClick={() => openBooking(service)}
           >
-            book a service now
+            {service.cta}
           </Button>
         </div>
       </GlassCard>

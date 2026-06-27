@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -301,11 +301,13 @@ export default function ServicesShowcase({
             </div>
 
             <div className="mt-10">
-              <Button size="lg">
-                {
-                  activeService.ctaLabel
-                }
-              </Button>
+              <Link href="/services">
+                <Button size="lg">
+                  {
+                    activeService.ctaLabel
+                  }
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </AnimatePresence>

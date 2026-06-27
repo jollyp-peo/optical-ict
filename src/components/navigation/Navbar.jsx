@@ -1,8 +1,14 @@
+"use client";
+
 import Container from "@/components/layout/Container";
+
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
+
 import Button from "@/components/ui/Button";
+
+import BookButton from "@/features/booking/components/BookButton";
 
 export default function Navbar() {
   return (
@@ -11,9 +17,12 @@ export default function Navbar() {
         sticky
         top-0
         z-50
+
         border-b
         border-slate-200/80
+
         bg-white/80
+
         backdrop-blur-xl
       "
     >
@@ -29,6 +38,7 @@ export default function Navbar() {
           <Logo />
 
           <NavLinks />
+
           <MobileMenu />
 
           <div
@@ -36,18 +46,17 @@ export default function Navbar() {
               hidden
               items-center
               gap-3
+
               lg:flex
             "
           >
-            <Button
-              variant="ghost"
-            >
+            <Button variant="ghost">
               Login
             </Button>
 
-            <Button>
+            <BookButton type="repair">
               Book Repair
-            </Button>
+            </BookButton>
           </div>
         </div>
       </Container>

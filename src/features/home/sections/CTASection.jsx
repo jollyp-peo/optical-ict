@@ -1,5 +1,5 @@
 "use client"
-import Link from "next/link";
+import BookButton from "@/features/booking/components/BookButton";
 
 import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -91,10 +91,12 @@ export default function CTASection() {
                 icons[action.title];
 
               return (
-                <Link
-                  key={action.title}
-                  href={action.href}
-                >
+                <BookButton
+                 key={action.title}
+                 type={action.bookingType}
+                 className="block h-full bg-transparent p-0"
+                 pickup={action.pickup}
+               >
                   <div
                     className="
                       group
@@ -182,7 +184,7 @@ export default function CTASection() {
                       {action.description}
                     </p>
                   </div>
-                </Link>
+                </BookButton>
               );
             }
           )}

@@ -126,8 +126,9 @@ export default function MobileMenu() {
               {publicNavigation.map(
                 (item) => {
                   const hasChildren =
-                    item.children?.length;
-
+                   Array.isArray(item.children) &&
+                   item.children.length > 0;
+                   
                   if (!hasChildren) {
                     return (
                       <Link

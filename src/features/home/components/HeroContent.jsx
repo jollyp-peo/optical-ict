@@ -1,7 +1,9 @@
-import Link from "next/link";
+"use client";
 
 import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
+
+import BookButton from "@/features/booking/components/BookButton";
 
 import { heroContent } from "@/data/home";
 
@@ -22,20 +24,27 @@ export default function HeroContent() {
           gap-4
         "
       >
-        <Link href={heroContent.primaryCta.href}>
-          <Button size="lg">
-            {heroContent.primaryCta.label}
-          </Button>
-        </Link>
+        {/* Primary CTA */}
 
-        <Link href={heroContent.secondaryCta.href}>
-          <Button
-            variant="outline"
-            size="lg"
-          >
-            {heroContent.secondaryCta.label}
-          </Button>
-        </Link>
+        <BookButton
+          type="repair"
+          size="lg"
+        >
+          {heroContent.primaryCta.label}
+        </BookButton>
+
+        {/* Secondary CTA */}
+
+        <BookButton
+          type="service"
+          size="lg"
+          variant="outline"
+          booking={{
+            requestType: "quote",
+          }}
+        >
+          {heroContent.secondaryCta.label}
+        </BookButton>
       </div>
     </div>
   );

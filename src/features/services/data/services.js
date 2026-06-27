@@ -2,7 +2,7 @@ export const services = [
   {
     id: "computer-repair",
 
-    title: "Computer Repair",
+    title: "Repair",
 
     category: "Repair Services",
 
@@ -160,3 +160,11 @@ export const services = [
     cta: "Book Cloud Consultation",
   },
 ];
+
+export const repairService = services.find(
+  (service) => service.bookingType === "repair"
+);
+
+export const businessService = services.find(
+  (service) => service.bookingType === "development"
+);

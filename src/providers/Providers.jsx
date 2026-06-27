@@ -2,9 +2,13 @@
 
 import QueryProvider from "./QueryProvider";
 import { ThemeProvider } from "./ThemeProvider";
+import { NotificationProvider } from "./NotificationProvider";
+
 import {
-  NotificationProvider,
-} from "./NotificationProvider";
+  BookingProvider,
+} from "@/features/booking/BookingContext";
+
+import BookingModal from "@/features/booking/BookingModal";
 
 export default function Providers({
   children,
@@ -13,7 +17,15 @@ export default function Providers({
     <QueryProvider>
       <ThemeProvider>
         <NotificationProvider>
-          {children}
+          <BookingProvider>
+
+            {children}
+
+            {/* Global Booking Modal */}
+
+            <BookingModal />
+
+          </BookingProvider>
         </NotificationProvider>
       </ThemeProvider>
     </QueryProvider>
