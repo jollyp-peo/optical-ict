@@ -10,24 +10,36 @@ import {
 
 import BookingModal from "@/features/booking/BookingModal";
 
+import {
+  AuthProvider,
+} from "@/features/auth/context/AuthContext";
+
 export default function Providers({
   children,
 }) {
   return (
     <QueryProvider>
-      <ThemeProvider>
+
+    <ThemeProvider>
+
         <NotificationProvider>
-          <BookingProvider>
 
-            {children}
+            <AuthProvider>
 
-            {/* Global Booking Modal */}
+                <BookingProvider>
 
-            <BookingModal />
+                    {children}
 
-          </BookingProvider>
+                    <BookingModal/>
+
+                </BookingProvider>
+
+            </AuthProvider>
+
         </NotificationProvider>
-      </ThemeProvider>
-    </QueryProvider>
+
+    </ThemeProvider>
+
+</QueryProvider>
   );
 }
