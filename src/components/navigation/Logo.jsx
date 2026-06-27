@@ -10,14 +10,14 @@ export default function Logo() {
         gap-2
       "
     >
-      <div
+      <img
+        src="/images/brand/optimal.logo.webp"
+        alt="Optimal ICT"
         className="
           h-10
           w-10
           rounded-xl
-          bg-gradient-to-br
-          from-yellow-400
-          to-purple-400
+          object-contain
         "
       />
 
@@ -38,7 +38,7 @@ export default function Logo() {
             text-slate-500
           "
         >
-          Technology Solutions
+          Productive Technology
         </span>
       </div>
     </Link>

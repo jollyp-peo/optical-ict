@@ -33,6 +33,20 @@ export const publicNavigation = [
   },
 
   {
+    label: "Track booking",
+    children: [
+      {
+        label: "Track Repair",
+        href: "/track",
+      },
+      {
+        label: "Track Services",
+        href: "/track-service",
+      }
+    ]
+  },
+
+  {
     label: "Contact",
     href: "/contact",
   },

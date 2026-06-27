@@ -26,25 +26,20 @@ export default function HeroContent() {
       >
         {/* Primary CTA */}
 
-        <Button
-          type="repair"
-          size="lg"
+        <BookButton
+          bookingType="REPAIR"
         >
           {heroContent.primaryCta.label}
-        </Button>
+        </BookButton>
 
         {/* Secondary CTA */}
 
-        <Button
-          type="service"
-          size="lg"
+        <BookButton
+          bookingType="SERVICE" 
           variant="outline"
-          booking={{
-            requestType: "quote",
-          }}
         >
           {heroContent.secondaryCta.label}
-        </Button>
+        </BookButton>
       </div>
     </div>
   );

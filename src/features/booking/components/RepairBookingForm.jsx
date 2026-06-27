@@ -11,6 +11,8 @@ import SelectField from "@/components/forms/SelectField";
 import Button from "@/components/ui/Button";
 
 import {
+  DEVICE_TYPES,
+  REPAIR_SERVICE_TYPES,
   PICKUP_REQUIRED_OPTIONS,
   PICKUP_TIME_SLOTS,
 } from "../config/booking.config";
@@ -28,7 +30,7 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
       customerPhone: "",
       customerEmail: "",
       bookingType: "REPAIR",
-      serviceType: "Repair",
+      serviceType: "",
       payload: {
         details: {
           deviceType: "",
@@ -37,7 +39,7 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
           issue: "",
         },
         pickup: {
-          required: "false",
+          required: false,
           preferredDay: "",
           preferredTime: "",
         },
@@ -46,16 +48,15 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
   });
 
   const pickupRequired = watch("payload.pickup.required");
+  const showPickupFields = pickupRequired === true || pickupRequired === "true";
 
   const handleFormSubmit = (data) => {
-    
     onSubmit(data);
   };
 
   return (
     <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-8">
       <input type="hidden" {...register("bookingType")} />
-      <input type="hidden" {...register("serviceType")} />
 
       <div className="space-y-4">
         <h3 className="text-lg font-semibold text-slate-900">
@@ -64,6 +65,7 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
 
         <InputField
           label="Full Name"
+          placeholder="John Doe"
           required
           {...register("customerName")}
           error={errors.customerName?.message}
@@ -71,6 +73,7 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
 
         <InputField
           label="Phone Number"
+          placeholder="+263 77 123 4567"
           required
           {...register("customerPhone")}
           error={errors.customerPhone?.message}
@@ -79,25 +82,36 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
         <InputField
           label="Email"
           type="email"
+          placeholder="john@example.com"
           {...register("customerEmail")}
           error={errors.customerEmail?.message}
         />
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-slate-900">
-          Repair Details
-        </h3>
+        <h3 className="text-lg font-semibold text-slate-900">Repair Details</h3>
 
-        <InputField
-          label="Device Type"
+        <SelectField
+          label="Service Type"
+          placeholder="Select Repair Service"
           required
+          options={REPAIR_SERVICE_TYPES}
+          {...register("serviceType")}
+          error={errors.serviceType?.message}
+        />
+
+        <SelectField
+          label="Device Type"
+          placeholder="Select Device Type"
+          required
+          options={DEVICE_TYPES}
           {...register("payload.details.deviceType")}
           error={errors.payload?.details?.deviceType?.message}
         />
 
         <InputField
           label="Brand"
+          placeholder="e.g. Dell, HP, Apple"
           required
           {...register("payload.details.brand")}
           error={errors.payload?.details?.brand?.message}
@@ -105,6 +119,7 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
 
         <InputField
           label="Model"
+          placeholder="e.g. Latitude 5520, MacBook Pro"
           required
           {...register("payload.details.model")}
           error={errors.payload?.details?.model?.message}
@@ -112,6 +127,7 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
 
         <TextareaField
           label="Issue"
+          placeholder="Describe the problem you are experiencing..."
           required
           rows={4}
           {...register("payload.details.issue")}
@@ -124,13 +140,14 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
 
         <SelectField
           label="Pickup Required"
+          placeholder="Select option"
           required
           options={PICKUP_REQUIRED_OPTIONS}
           {...register("payload.pickup.required")}
           error={errors.payload?.pickup?.required?.message}
         />
 
-        {pickupRequired === "true" && (
+        {showPickupFields && (
           <>
             <InputField
               label="Preferred Pickup Day"
@@ -141,6 +158,7 @@ export default function RepairBookingForm({ onSubmit, isLoading, apiError }) {
 
             <SelectField
               label="Preferred Pickup Time"
+              placeholder="Select Time Slot"
               options={PICKUP_TIME_SLOTS}
               {...register("payload.pickup.preferredTime")}
               error={errors.payload?.pickup?.preferredTime?.message}

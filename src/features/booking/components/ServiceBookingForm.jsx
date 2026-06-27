@@ -7,7 +7,10 @@ import { serviceBookingSchema } from "../validation/booking.schema";
 
 import InputField from "@/components/forms/InputField";
 import TextareaField from "@/components/forms/TextareaField";
+import SelectField from "@/components/forms/SelectField";
 import Button from "@/components/ui/Button";
+
+import { SERVICE_TYPES } from "../config/booking.config";
 
 export default function ServiceBookingForm({ onSubmit, isLoading, apiError }) {
   const {
@@ -21,7 +24,7 @@ export default function ServiceBookingForm({ onSubmit, isLoading, apiError }) {
       customerPhone: "",
       customerEmail: "",
       bookingType: "SERVICE",
-      serviceType: "Service",
+      serviceType: "",
       payload: {
         details: {
           companyName: "",
@@ -40,7 +43,6 @@ export default function ServiceBookingForm({ onSubmit, isLoading, apiError }) {
   return (
     <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-8">
       <input type="hidden" {...register("bookingType")} />
-      <input type="hidden" {...register("serviceType")} />
 
       <div className="space-y-4">
         <h3 className="text-lg font-semibold text-slate-900">
@@ -49,6 +51,7 @@ export default function ServiceBookingForm({ onSubmit, isLoading, apiError }) {
 
         <InputField
           label="Full Name"
+          placeholder="John Doe"
           required
           {...register("customerName")}
           error={errors.customerName?.message}
@@ -56,6 +59,7 @@ export default function ServiceBookingForm({ onSubmit, isLoading, apiError }) {
 
         <InputField
           label="Phone Number"
+          placeholder="+263 77 123 4567"
           required
           {...register("customerPhone")}
           error={errors.customerPhone?.message}
@@ -64,6 +68,7 @@ export default function ServiceBookingForm({ onSubmit, isLoading, apiError }) {
         <InputField
           label="Email"
           type="email"
+          placeholder="john@example.com"
           {...register("customerEmail")}
           error={errors.customerEmail?.message}
         />
@@ -74,14 +79,25 @@ export default function ServiceBookingForm({ onSubmit, isLoading, apiError }) {
           Service Details
         </h3>
 
+        <SelectField
+          label="Service Type"
+          placeholder="Select Service"
+          required
+          options={SERVICE_TYPES}
+          {...register("serviceType")}
+          error={errors.serviceType?.message}
+        />
+
         <InputField
           label="Company Name"
+          placeholder="Acme Corporation (optional)"
           {...register("payload.details.companyName")}
           error={errors.payload?.details?.companyName?.message}
         />
 
         <TextareaField
           label="Project Description"
+          placeholder="Tell us about your project requirements..."
           required
           rows={4}
           {...register("payload.details.projectDescription")}
@@ -90,6 +106,7 @@ export default function ServiceBookingForm({ onSubmit, isLoading, apiError }) {
 
         <InputField
           label="Budget"
+          placeholder="e.g. $5,000 - $10,000 (optional)"
           {...register("payload.details.budget")}
           error={errors.payload?.details?.budget?.message}
         />

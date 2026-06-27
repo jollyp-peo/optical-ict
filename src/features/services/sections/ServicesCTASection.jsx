@@ -1,8 +1,8 @@
 "use client";
 
 import Section from "@/components/layout/Section";
-import Button from "@/components/ui/Button";
 import useBooking from "@/features/booking/hooks/useBooking";
+import BookButton from "@/features/booking/components/BookButton";
 
 export default function ServicesCTASection() {
   const { openBooking } = useBooking();
@@ -20,34 +20,19 @@ export default function ServicesCTASection() {
     gap-4
   "
       >
-        <Button
-          size="lg"
-          onClick={() =>
-            openBooking({
-              id: "computer-repair",
-              title: "Computer Repair",
-              bookingType: "repair",
-              serviceType: "computer",
-            })
-          }
+        <BookButton
+          bookingType="REPAIR"
+          variant="primary"
         >
           Book a Repair
-        </Button>
+        </BookButton>
 
-        <Button
-          size="lg"
+        <BookButton
           variant="secondary"
-          onClick={() =>
-            openBooking({
-              id: "website-development",
-              title: "Website Development",
-              bookingType: "development",
-              serviceType: "website",
-            })
-          }
+          bookingType="SERVICE"
         >
           Book a Service
-        </Button>
+        </BookButton>
       </div>
     </Section>
   );
