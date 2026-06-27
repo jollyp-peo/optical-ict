@@ -2,14 +2,15 @@
 
 import { useContext } from "react";
 
-import { BookingContext } from "../BookingContext";
+import { BookingContext } from "../context/BookingContext";
 
 export default function useBooking() {
-  const context = useContext(BookingContext);
+  const context =
+    useContext(BookingContext);
 
   if (!context) {
     throw new Error(
-      "useBooking must be used inside BookingProvider."
+      "useBooking must be used inside BookingProvider.",
     );
   }
 

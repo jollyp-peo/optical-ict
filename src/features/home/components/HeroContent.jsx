@@ -26,16 +26,16 @@ export default function HeroContent() {
       >
         {/* Primary CTA */}
 
-        <BookButton
+        <Button
           type="repair"
           size="lg"
         >
           {heroContent.primaryCta.label}
-        </BookButton>
+        </Button>
 
         {/* Secondary CTA */}
 
-        <BookButton
+        <Button
           type="service"
           size="lg"
           variant="outline"
@@ -44,7 +44,7 @@ export default function HeroContent() {
           }}
         >
           {heroContent.secondaryCta.label}
-        </BookButton>
+        </Button>
       </div>
     </div>
   );

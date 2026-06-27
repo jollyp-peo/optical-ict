@@ -1,5 +1,7 @@
-"use client"
-import BookButton from "@/features/booking/components/BookButton";
+"use client";
+
+import Link from "next/link";
+import Button from "@/components/ui/Button";
 
 import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -12,9 +14,7 @@ import {
   ArrowRight,
 } from "@phosphor-icons/react";
 
-import {
-  ctaActions,
-} from "@/data/home";
+import { ctaActions } from "@/data/home";
 
 const icons = {
   "Book Device Repair": Wrench,
@@ -85,18 +85,24 @@ export default function CTASection() {
             md:grid-cols-2
           "
         >
-          {ctaActions.map(
-            (action) => {
-              const Icon =
-                icons[action.title];
+          {ctaActions.map((action) => {
+            const Icon = icons[action.title];
 
-              return (
-                <BookButton
-                 key={action.title}
-                 type={action.bookingType}
-                 className="block h-full bg-transparent p-0"
-                 pickup={action.pickup}
-               >
+            return (
+              <Link
+                key={action.title}
+                href="/services"
+                className="block h-full"
+              >
+                <Button
+                  className="
+                    block
+                    h-full
+                    w-full
+                    bg-transparent
+                    p-0
+                  "
+                >
                   <div
                     className="
                       group
@@ -144,10 +150,7 @@ export default function CTASection() {
                           text-slate-950
                         "
                       >
-                        <Icon
-                          size={28}
-                          weight="duotone"
-                        />
+                        <Icon size={28} weight="duotone" />
                       </div>
 
                       <ArrowRight
@@ -184,10 +187,10 @@ export default function CTASection() {
                       {action.description}
                     </p>
                   </div>
-                </BookButton>
-              );
-            }
-          )}
+                </Button>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </Section>

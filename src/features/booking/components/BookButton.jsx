@@ -1,67 +1,21 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import useBooking from "../hooks/useBooking";
-
-import {
-  repairService,
-  businessService,
-} from "@/features/services/data/services";
+import { useBooking } from "../context/BookingContext";
 
 export default function BookButton({
-  type = "service",
-  service,
-
+  bookingType,
   children,
-
-  booking = {},
-
-  // Booking-only props
-  pickup = false,
-  priority,
-  projectType,
-
-  onClick,
-
   ...buttonProps
 }) {
   const { openBooking } = useBooking();
 
-  const bookingService =
-    service ??
-    (type === "repair"
-      ? repairService
-      : businessService);
-
-  function handleClick(event) {
-    onClick?.(event);
-
-    if (
-      event.defaultPrevented ||
-      !bookingService
-    ) {
-      return;
-    }
-
-    openBooking({
-      ...bookingService,
-
-      ...booking,
-
-      pickup,
-      priority,
-      projectType,
-    });
-  }
-
   return (
     <Button
+      onClick={() => openBooking(bookingType)}
       {...buttonProps}
-      onClick={handleClick}
     >
-      {children ??
-        bookingService?.cta ??
-        "Book Now"}
+      {children}
     </Button>
   );
 }

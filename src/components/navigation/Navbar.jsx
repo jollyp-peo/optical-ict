@@ -7,10 +7,13 @@ import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
 
 import Button from "@/components/ui/Button";
+import { useBooking } from "@/features/booking/context/BookingContext";
 
 import BookButton from "@/features/booking/components/BookButton";
 
 export default function Navbar() {
+
+  const { openBooking } = useBooking();
   return (
     <header
       className="
@@ -54,7 +57,7 @@ export default function Navbar() {
               Login
             </Button>
 
-            <BookButton type="repair">
+            <BookButton bookingType="REPAIR"  variant="primary">
               Book Repair
             </BookButton>
           </div>

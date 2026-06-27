@@ -4,11 +4,8 @@ import QueryProvider from "./QueryProvider";
 import { ThemeProvider } from "./ThemeProvider";
 import { NotificationProvider } from "./NotificationProvider";
 
-import {
-  BookingProvider,
-} from "@/features/booking/BookingContext";
-
-import BookingModal from "@/features/booking/BookingModal";
+import { BookingProvider } from "@/features/booking/context/BookingContext";
+import BookingModal from "@/features/booking/components/BookingModal";
 
 import {
   AuthProvider,

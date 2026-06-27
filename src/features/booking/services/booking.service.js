@@ -1,21 +1,13 @@
-export async function createBooking(payload) {
-  console.log(
-    "Booking Request",
-    payload
-  );
+import * as bookingApi from "../api/booking.api";
 
-  await new Promise((resolve) =>
-    setTimeout(resolve, 1500)
-  );
+export async function createBookingService(payload) {
+  const { data } = await bookingApi.createBooking(payload);
 
-  return {
-    success: true,
+  return data.data;
+}
 
-    bookingId:
-      "BK-" +
-      Date.now(),
+export async function trackBookingService(payload) {
+  const { data } = await bookingApi.trackBooking(payload);
 
-    message:
-      "Booking submitted successfully.",
-  };
+  return data.data;
 }

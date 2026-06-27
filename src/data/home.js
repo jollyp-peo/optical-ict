@@ -501,26 +501,46 @@ export const faqs = [
 export const ctaActions = [
   {
     title: "Book Device Repair",
-    description: "Laptop, desktop and mobile repairs.",
-    bookingType: "repair",
+
+    description:
+      "Laptop, desktop and mobile repairs.",
+
+    bookingType: "REPAIR",
+
+    serviceType: "LAPTOP_REPAIR",
   },
 
   {
     title: "Request Pickup",
-    description: "Schedule device pickup and delivery.",
-    bookingType: "repair",
-    pickup: true,
+
+    description:
+      "Schedule device pickup and delivery.",
+
+    bookingType: "REPAIR",
+
+    serviceType: "LAPTOP_REPAIR",
   },
 
   {
     title: "Start A Website Project",
-    description: "Business websites and web applications.",
-    bookingType: "service",
+
+    description:
+      "Business websites and web applications.",
+
+    bookingType: "SERVICE",
+
+    serviceType:
+      "WEBSITE_DEVELOPMENT",
   },
 
   {
     title: "Get IT Support",
-    description: "Managed services and technical assistance.",
-    bookingType: "service",
+
+    description:
+      "Managed services and technical assistance.",
+
+    bookingType: "SERVICE",
+
+    serviceType: "IT_SUPPORT",
   },
 ];
