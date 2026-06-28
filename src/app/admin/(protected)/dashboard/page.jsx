@@ -1,7 +1,9 @@
+import { AdminDashboard } from "@/features/admin";
+
+export const metadata = {
+  title: "Admin Dashboard — Optimal ICT Productive Tech.",
+};
+
 export default function DashboardPage() {
-  return (
-    <div className="p-8">
-      Dashboard
-    </div>
-  );
+  return <AdminDashboard />;
 }

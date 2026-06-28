@@ -1,18 +1,21 @@
 "use client";
 
 import { createContext, useContext, useMemo, useState } from "react";
+import { setAccessToken, clearAccessToken } from "@/services/api";
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
-  const [accessToken, setAccessToken] = useState(null);
+  const [accessToken, setAccessTokenState] = useState(null);
 
   const [isInitializing, setIsInitializing] = useState(true);
 
   function login(data) {
     setUser(data.user);
+
+    setAccessTokenState(data.accessToken);
 
     setAccessToken(data.accessToken);
   }
@@ -20,12 +23,14 @@ export function AuthProvider({ children }) {
   function logout() {
     setUser(null);
 
-    setAccessToken(null);
+    setAccessTokenState(null);
+
+    clearAccessToken();
   }
 
   function finishInitialization() {
-  setIsInitializing(false);
-}
+    setIsInitializing(false);
+  }
 
   const value = useMemo(
     () => ({
