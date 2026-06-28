@@ -1,6 +1,6 @@
 "use client";
 
-import NavLink from "@/components/NavLink";
+import Link from "next/link";
 
 import {
   CaretDown,
@@ -10,7 +10,7 @@ import {
   publicNavigation,
 } from "@/constants";
 
-export default function NavLinks() {
+export default function Links() {
   return (
     <nav
       className="
@@ -26,7 +26,7 @@ export default function NavLinks() {
 
         if (!hasChildren) {
           return (
-            <NavLink
+            <Link
               key={item.label}
               href={item.href}
               className="
@@ -41,7 +41,7 @@ export default function NavLinks() {
               "
             >
               {item.label}
-            </NavLink>
+            </Link>
           );
         }
 

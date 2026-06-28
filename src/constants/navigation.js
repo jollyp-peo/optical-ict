@@ -6,12 +6,12 @@ export const publicNavigation = [
 
   {
     label: "Services",
-    href: "/services",
+    href: "#services",
   },
 
   {
     label: "Projects",
-    href: "/#projects",
+    href: "#projects",
   },
 
   {
@@ -19,36 +19,28 @@ export const publicNavigation = [
     children: [
       {
         label: "About Us",
-        href: "/#about",
+        href: "#about",
       },
       {
         label: "Testimonials",
-        href: "/#testimonials",
+        href: "#testimonials",
       },
       {
         label: "FAQs",
-        href: "/#faq",
+        href: "#faq",
       },
     ],
   },
 
   {
-    label: "Track booking",
-    children: [
-      {
-        label: "Track Repair",
-        href: "/track",
-      },
-      {
-        label: "Track Services",
-        href: "/track-service",
-      }
-    ]
+    label: "Repair Tracking",
+    href: "/tracking",
+    
   },
 
   {
     label: "Contact",
-    href: "/#contact",
+    href: "/contact",
   },
 ];
 

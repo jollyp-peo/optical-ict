@@ -7,7 +7,7 @@ export const navigation = {
 
     {
       label: "Projects",
-      href: "/projects",
+      href: "#projects",
     },
 
     {
@@ -19,54 +19,54 @@ export const navigation = {
   services: [
     {
       label: "Laptop Repair",
-      href: "/services/laptop-repair",
+      href: "#services",
     },
 
     {
       label: "Phone Repair",
-      href: "/services/phone-repair",
+      href: "#services",
     },
 
     {
       label: "Website Development",
-      href: "/services/website-development",
+      href: "#services",
     },
 
     {
       label: "Mobile App Development",
-      href: "/services/mobile-app-development",
+      href: "#services",
     },
 
     {
       label: "Networking",
-      href: "/services/networking",
+      href: "#services",
     },
 
     {
       label: "Corporate IT Support",
-      href: "/services/corporate-it-support",
+      href: "#services",
     },
 
     {
       label: "Managed IT Services",
-      href: "/services/managed-it-services",
+      href: "#services"
     },
   ],
 
   company: [
     {
       label: "About Us",
-      href: "/about",
+      href: "#about",
     },
 
     {
       label: "Testimonials",
-      href: "/testimonials",
+      href: "#testimonials",
     },
 
     {
       label: "FAQs",
-      href: "/faq",
+      href: "#faq",
     },
   ],
 };

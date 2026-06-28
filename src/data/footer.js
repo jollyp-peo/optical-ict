@@ -2,70 +2,67 @@ export const footerData = {
   services: [
     {
       label: "Laptop Repair",
-      href: "/services/laptop-repair",
+      href: "#services",
     },
     {
       label: "Phone Repair",
-      href: "/services/phone-repair",
+      href: "#services",
     },
     {
       label: "Website Development",
-      href: "/services/web-development",
+      href: "#services",
     },
     {
       label: "Mobile App Development",
-      href: "/services/mobile-development",
+      href: "#services",
     },
     {
       label: "Networking",
-      href: "/services/networking",
+      href: "#services",
     },
     {
       label: "Corporate IT Support",
-      href: "/services/it-support",
+      href: "#services",
     },
     {
       label: "Managed IT Services",
-      href: "/services/managed-services",
+      href: "#services",
     },
   ],
 
   company: [
     {
       label: "About Us",
-      href: "/about",
+      href: "#about",
     },
     {
       label: "Projects",
-      href: "/projects",
+      href: "#projects",
     },
     {
       label: "Testimonials",
-      href: "/testimonials",
+      href: "#testimonials",
     },
     {
       label: "Contact",
-      href: "/contact",
+      href: "#contact",
     },
   ],
 
   resources: [
     {
       label: "FAQs",
-      href: "/faq",
+      href: "#faq",
     },
     {
       label: "Support",
-      href: "/support",
+      href: "#contact",
     },
     {
       label: "Repair Tracking",
       href: "/tracking",
     },
-    {
-      label: "Invoices",
-      href: "/billing",
-    },
+    
     {
       label: "Privacy Policy",
       href: "/privacy-policy",

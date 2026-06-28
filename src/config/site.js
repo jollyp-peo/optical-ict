@@ -1,10 +1,10 @@
 export const siteConfig = {
   company: {
-    name: "Optimal ICT Solutions",
+    name: "Optimal ICT Productive Tech",
 
     shortName: "Optimal ICT",
 
-    legalName: "Optimal ICT Solutions Limited",
+    legalName: "Optimal ICT Productive Tech",
 
     tagline:
       "Repair. Support. Build. Scale.",
@@ -12,31 +12,31 @@ export const siteConfig = {
     description:
       "Professional laptop repair, mobile phone repair, website development, mobile application development, networking, corporate IT support, managed technology services, and device pickup solutions.",
 
-    founded: "2026",
+    founded: "2018",
 
-    email: "support@optimalict.com",
+    email: "support@optimalict.com.ng",
 
-    supportEmail: "help@optimalict.com",
+    supportEmail: "help@optimalict.com.ng",
 
-    salesEmail: "sales@optimalict.com",
+    salesEmail: "sales@optimalict.com.ng",
 
-    phone: "+234XXXXXXXXXX",
+    phone: "+2348076157744",
 
-    whatsapp: "+234XXXXXXXXXX",
+    whatsapp: "+2348076157744",
 
     address: {
-      street: "",
+      street: "12 Saka Tinubu Street",
       city: "Lagos",
       state: "Lagos",
       country: "Nigeria",
-      postalCode: "",
+      postalCode: "101241",
     },
   },
 
   urls: {
     website:
       process.env.NEXT_PUBLIC_SITE_URL ||
-      "https://optimalict.com",
+      "https://optimalict.com.ng",
 
     dashboard:
       "/dashboard",
@@ -61,10 +61,10 @@ export const siteConfig = {
 
   seo: {
     defaultTitle:
-      "Optimal ICT Solutions",
+      "Optimal ICT Productive Tech",
 
     titleTemplate:
-      "%s | Optimal ICT Solutions",
+      "%s | Optimal ICT Productive Tech",
 
     defaultDescription:
       "Professional device repair, IT support, networking, website development and mobile application development services.",
@@ -82,7 +82,7 @@ export const siteConfig = {
       "Technology Consulting",
     ],
 
-    author: "Optimal ICT Solutions",
+    author: "Optimal ICT Productive Tech",
 
     locale: "en_NG",
 

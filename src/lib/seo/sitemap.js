@@ -6,7 +6,6 @@ export function createStaticRoutes() {
     "/about",
     "/services",
     "/portfolio",
-    "/blog",
     "/contact",
     "/repair-booking",
     "/track-device",

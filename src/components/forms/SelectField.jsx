@@ -12,7 +12,11 @@ export default function SelectField({
 }) {
   return (
     <div>
-      {label && <FormLabel required={required}>{label}</FormLabel>}
+      {label && (
+        <FormLabel required={required}>
+          {label}
+        </FormLabel>
+      )}
 
       <div className="relative">
         <select
@@ -26,6 +30,7 @@ export default function SelectField({
             px-4
             py-3
             pr-10
+            text-slate-950
             outline-none
             transition
             focus:border-yellow-400
@@ -46,7 +51,10 @@ export default function SelectField({
           )}
 
           {options.map((option) => (
-            <option key={String(option.value)} value={option.value}>
+            <option
+              key={String(option.value)}
+              value={option.value}
+            >
               {option.label}
             </option>
           ))}
