@@ -7,7 +7,8 @@ import ProjectShowcase from "../components/ProjectShowcase";
 
 export default function ProjectsSection() {
   return (
-    <Section>
+    <Section id={"#projects"}>
+
       <SectionHeader
         centered
         eyebrow="Featured Projects"

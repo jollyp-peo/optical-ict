@@ -14,8 +14,8 @@ export default function Logo() {
         src="/images/brand/optimal.logo.webp"
         alt="Optimal ICT"
         className="
-          h-10
-          w-10
+          h-12
+          w-12
           rounded-xl
           object-contain
         "
@@ -25,7 +25,7 @@ export default function Logo() {
         <span
           className="
             block
-            text-sm
+            text-m
             font-semibold
           "
         >
@@ -34,11 +34,20 @@ export default function Logo() {
 
         <span
           className="
-            text-xs
-            text-slate-500
+            text-sm
+            text-slate-900
           "
         >
-          Productive Technology
+          Productive Tech.
+        </span>
+        <br></br>
+        <span
+          className="
+            text-sm
+            text-orange-950
+          "
+        >
+          RC 3658997. 
         </span>
       </div>
     </Link>

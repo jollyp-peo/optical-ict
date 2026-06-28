@@ -11,6 +11,7 @@ import FAQList from "../components/FAQList";
 export default function FAQSection() {
   return (
     <Section
+    id={"faq"}
       containerClassName="
         relative
         overflow-hidden

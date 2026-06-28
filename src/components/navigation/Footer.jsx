@@ -190,7 +190,7 @@ export default function Footer() {
               </p>
 
               <p>
-                Sarka Tinubu Street, Victoria Island, Lagos
+                12 Saka Tinubu Street, Victoria Island, Lagos
                 <br />
                 Nigeria
               </p>

@@ -8,6 +8,7 @@ import TestimonialCarousel from "../components/TestimonialCarousel";
 export default function TestimonialsSection() {
   return (
     <Section
+    id={"#testimonials"}
       containerClassName="
         relative
         overflow-hidden

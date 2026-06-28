@@ -11,7 +11,7 @@ export const publicNavigation = [
 
   {
     label: "Projects",
-    href: "/projects",
+    href: "/#projects",
   },
 
   {
@@ -19,15 +19,15 @@ export const publicNavigation = [
     children: [
       {
         label: "About Us",
-        href: "/about",
+        href: "/#about",
       },
       {
         label: "Testimonials",
-        href: "/testimonials",
+        href: "/#testimonials",
       },
       {
         label: "FAQs",
-        href: "/faq",
+        href: "/#faq",
       },
     ],
   },
@@ -48,7 +48,7 @@ export const publicNavigation = [
 
   {
     label: "Contact",
-    href: "/contact",
+    href: "/#contact",
   },
 ];
 

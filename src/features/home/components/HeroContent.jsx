@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 import BookButton from "@/features/booking/components/BookButton";

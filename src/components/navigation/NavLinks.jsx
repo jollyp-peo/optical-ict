@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import NavLink from "@/components/NavLink";
 
 import {
   CaretDown,
@@ -26,14 +26,14 @@ export default function NavLinks() {
 
         if (!hasChildren) {
           return (
-            <Link
+            <NavLink
               key={item.label}
               href={item.href}
               className="
                 text-sm
                 font-medium
 
-                text-slate-700
+                text-slate-900
 
                 transition-colors
 
@@ -41,7 +41,7 @@ export default function NavLinks() {
               "
             >
               {item.label}
-            </Link>
+            </NavLink>
           );
         }
 
@@ -100,9 +100,10 @@ export default function NavLinks() {
                 rounded-3xl
 
                 border
-                border-slate-200
+                border-slate-900
 
                 bg-white/95
+                text-slate-950
 
                 p-3
 

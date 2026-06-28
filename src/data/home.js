@@ -1,24 +1,24 @@
 export const heroContent = {
-  eyebrow: "Trusted IT Services & Device Repair",
+  eyebrow: "Trusted Repairs & Digital Solutions",
 
-  title: "Repair Devices. Build Digital Products. Scale Your Business.",
+  title: "Laptops, Phones & Software. Repaired & Built by Experts",
 
   description:
-    "From laptop and mobile repairs to enterprise IT support, websites, mobile apps, networking, and managed technology services — we help individuals and businesses stay productive.",
+    "We repair laptops, smartphones, and tablets with fast turnaround and certified parts. We also build custom websites, mobile apps, and provide full IT support from cloud setup and networking to ongoing managed services for individuals and businesses ready to grow.",
 
   primaryCta: {
     label: "Book Repair",
   },
 
   secondaryCta: {
-    label: "Get A Quote",
+    label: "Get a Quote",
   },
 
   trustIndicators: [
-    "Fast Turnaround",
-    "Pickup & Delivery",
-    "Certified Technicians",
-    "Business IT Support",
+    "Same-Day Repairs",
+    "Free Pickup & Delivery",
+    "Web, App & IT Experts",
+    "Warranty Included",
   ],
 };
 
@@ -52,7 +52,7 @@ export const servicesPreview = [
   {
     id: "laptop-repair",
     title: "Laptop Repair",
-    shortDescription: "Diagnostics, upgrades and hardware repairs.",
+    shortDescription: "Expert repairs for MacBook, HP, Dell, Lenovo and all major brands — diagnostics, upgrades and hardware fixes.",
 
     image: "/images/services/laptop-repair.webp",
 
@@ -72,7 +72,7 @@ export const servicesPreview = [
   {
     id: "mobile-repair",
     title: "Mobile Repair",
-    shortDescription: "Screen, battery and board repairs.",
+    shortDescription: "Screen, battery and board repairs for Apple iPhone, Samsung, Oppo and all leading brands.",
     image: "/images/services/mobile-phone-repair.webp",
 
     description:
@@ -171,81 +171,71 @@ export const servicesPreview = [
 export const processSteps = [
   {
     number: "01",
-
-    title: "Request Service",
-
+    title: "Book Online or Request a Quote",
     description:
-      "Book a repair, request IT support, or start a development project through our platform.",
+      "For repairs, simply book through our website — tell us your device, describe the issue and pick a convenient time. For IT projects, web development or mobile apps, fill out a brief project request and our team will reach out within hours to understand your goals.",
   },
-
   {
     number: "02",
-
-    title: "Diagnosis & Planning",
-
+    title: "We Pick Up or Scope Your Project",
     description:
-      "Our team evaluates requirements, diagnoses issues and provides recommendations.",
+      "Repairs: We send a rider to collect your laptop or phone from your home or office at no extra cost. Services: We schedule a discovery call to define the full scope, timeline and budget. You get a clear proposal with no hidden costs before any work begins.",
   },
-
   {
     number: "03",
-
-    title: "Execution",
-
+    title: "Expert Repair & Precision Build",
     description:
-      "Repairs, support activities or development work are carried out by our specialists.",
+      "Repairs: Our certified technicians diagnose the fault, confirm the quote with you and proceed with genuine parts and thorough testing. Services: Our designers and developers build your solution with regular updates, ensuring every feature matches your requirements.",
   },
-
   {
     number: "04",
-
-    title: "Delivery & Ongoing Support",
-
+    title: "Delivered, Deployed & Supported",
     description:
-      "Receive your completed project, repaired device or continued technical support.",
+      "Repairs: Your fully restored device is delivered back to your door with a warranty for peace of mind. Services: We deploy your project, provide training if needed and offer optional ongoing maintenance to keep everything running smoothly long after launch.",
   },
 ];
 
 export const whyChooseUs = {
-  title: "Technology Solutions Built Around Reliability.",
+  title: "Why Businesses & Individuals Trust Us With Their Tech",
 
   description:
-    "We combine technical expertise, responsive support and transparent communication to deliver solutions that businesses and individuals can trust.",
+    "From emergency repairs to enterprise software, we treat every project with the same commitment: fast response times, honest communication, and work that lasts. no hidden fees — just reliable technology solutions that keep you moving forward.",
 
   features: [
     {
-      title: "Fast Turnaround",
-      description: "Quick diagnostics, repairs and project delivery.",
+      title: "Same-Day Diagnostics & Speedy Repairs",
+      description:
+        "We know downtime costs money. That is why we prioritize rapid turnaround — most diagnostics are completed within hours and standard repairs often ship back the same day. For urgent business needs, we offer express service lanes to get you operational again without delay.",
       icon: "lightning",
     },
-
     {
-      title: "Pickup & Delivery",
-      description: "Convenient device collection and return services.",
+      title: "Free Door-to-Door Pickup & Delivery",
+      description:
+        "No time to visit a shop? We send a trusted rider to collect your laptop, phone or tablet from your home or office and return it fully repaired. Available across our service areas with real-time tracking so you always know where your device is.",
       icon: "truck",
     },
-
     {
-      title: "Certified Specialists",
-      description: "Experienced professionals handling every project.",
+      title: "Certified Technicians & Developers",
+      description:
+        "Our team is not just experienced — they are certified. From Apple and Windows hardware specialists to full-stack developers and network engineers, every person touching your project has proven expertise and undergoes continuous training on the latest technology.",
       icon: "shield",
     },
-
     {
-      title: "Transparent Pricing",
-      description: "Clear estimates with no hidden charges.",
+      title: "Upfront Quotes, Zero Hidden Costs",
+      description:
+        "You receive a detailed, itemized estimate before any work begins. If additional issues are found during repair, we contact you for approval first. For development projects, milestones are tied to fixed deliverables so your budget stays predictable from day one.",
       icon: "money",
     },
-
     {
-      title: "Ongoing Support",
-      description: "Post-delivery support and maintenance options.",
+      title: "Warranty & Post-Project Support",
+      description:
+        "Every repair carries a warranty on parts and labor. Every software project includes a post-launch support window. We do not disappear after delivery — our team remains available for maintenance, updates, troubleshooting and scaling as your needs grow.",
       icon: "support",
     },
-
     {
-      title: "Quality Guarantee",
-      description: "Confidence backed by service warranties.",
+      title: "Quality Work, Guaranteed",
+      description:
+        "We use genuine or OEM-grade components for repairs and follow industry best practices for code, security and infrastructure. If something is not right, we make it right. Our reputation is built on repeat customers and referrals — and we intend to keep it that way.",
       icon: "award",
     },
   ],
@@ -253,12 +243,12 @@ export const whyChooseUs = {
 
 export const companyStats = [
   {
-    value: "500+",
+    value: "200+",
     label: "Devices Repaired",
   },
 
   {
-    value: "120+",
+    value: "50+",
     label: "Projects Delivered",
   },
 

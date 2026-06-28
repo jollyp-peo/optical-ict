@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { forwardRef } from "react";
 import { CircleNotch } from "@phosphor-icons/react";
-
 import { theme } from "@/constants/theme";
 import { cn } from "@/lib/utils/cn";
 
@@ -16,25 +15,17 @@ const sizes = {
 const Button = forwardRef(function Button(
   {
     children,
-
     variant = "primary",
     size = "md",
-
     href,
     external = false,
-
     type = "button",
-
     fullWidth = false,
-
     loading = false,
     disabled = false,
-
     leftIcon,
     rightIcon,
-
     className = "",
-
     ...props
   },
   ref
@@ -49,12 +40,14 @@ const Button = forwardRef(function Button(
       rounded-xl
 
       font-medium
-
       whitespace-nowrap
 
       transition-all
       duration-300
       ease-out
+
+      cursor-pointer
+      touch-manipulation
 
       focus-visible:outline-none
       focus-visible:ring-2
@@ -78,10 +71,9 @@ const Button = forwardRef(function Button(
         <>
           <CircleNotch
             size={18}
-            className="animate-spin"
+            className="animate-spin pointer-events-none"
             weight="bold"
           />
-
           <span>Loading...</span>
         </>
       ) : (
@@ -89,7 +81,7 @@ const Button = forwardRef(function Button(
           {leftIcon && (
             <span
               aria-hidden="true"
-              className="flex items-center"
+              className="flex items-center pointer-events-none"
             >
               {leftIcon}
             </span>
@@ -100,7 +92,7 @@ const Button = forwardRef(function Button(
           {rightIcon && (
             <span
               aria-hidden="true"
-              className="flex items-center"
+              className="flex items-center pointer-events-none"
             >
               {rightIcon}
             </span>

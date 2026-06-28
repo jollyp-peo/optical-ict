@@ -7,13 +7,11 @@ import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
 
 import Button from "@/components/ui/Button";
-import { useBooking } from "@/features/booking/context/BookingContext";
 
 import BookButton from "@/features/booking/components/BookButton";
 
 export default function Navbar() {
 
-  const { openBooking } = useBooking();
   return (
     <header
       className="
@@ -24,7 +22,7 @@ export default function Navbar() {
         border-b
         border-slate-200/80
 
-        bg-white/80
+        bg-[var(--color-secondary)]/80
 
         backdrop-blur-xl
       "
@@ -53,7 +51,7 @@ export default function Navbar() {
               lg:flex
             "
           >
-            <Button variant="ghost">
+            <Button variant="main">
               Login
             </Button>
 

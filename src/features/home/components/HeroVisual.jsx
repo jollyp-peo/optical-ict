@@ -33,8 +33,7 @@ export default function HeroVisual() {
           via-white/80
           to-transparent
         "
-       />
-
+      />
 
       {/* Purple Glow */}
       <div
@@ -67,16 +66,22 @@ export default function HeroVisual() {
       {/* Floating Trust Indicators */}
       <div
         className="
-          absolute
-          bottom-8
-          left-8
-          right-8
-          z-20
-        "
+    absolute
+    bottom-8
+    left-1/2
+    z-20
+    w-full
+    max-w-xs
+    -translate-x-1/2
+    px-4
+    sm:left-8
+    sm:right-8
+    sm:w-auto
+    sm:max-w-none
+    sm:translate-x-0
+  "
       >
-        <HeroTrustIndicators
-          items={heroContent.trustIndicators}
-        />
+        <HeroTrustIndicators items={heroContent.trustIndicators} />
       </div>
     </div>
   );

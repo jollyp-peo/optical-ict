@@ -8,6 +8,7 @@ import WhyChooseUsFeature from "../components/WhyChooseUsFeature";
 export default function WhyChooseUsSection() {
   return (
     <Section
+    id={"#about"}
       containerClassName="
         relative
         overflow-hidden
@@ -73,7 +74,7 @@ export default function WhyChooseUsSection() {
       >
         {/* Left Column */}
 
-        <div className="sticky top-24">
+        <div className="lg:sticky lg:top-24">
           <SectionHeader
             eyebrow="Why Choose Us"
             title={whyChooseUs.title}

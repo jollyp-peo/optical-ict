@@ -30,10 +30,14 @@ export default function MobileMenu() {
         onClick={() => setIsOpen(true)}
         className="
           lg:hidden
+          cursor-pointer 
+          touch-manipulation
         "
         aria-label="Open menu"
       >
-        <List size={28} />
+        <List size={28} 
+         className="pointer-events-none"
+        />
       </button>
 
       {/* Overlay */}
@@ -115,14 +119,14 @@ export default function MobileMenu() {
 
             <div
               className="
-                mt-10
-
                 flex
                 flex-col
                 gap-2
-                bg-purple-200
+                bg-slate-950
+                rounded
               "
             >
+              <div className="mt-10 flex flex-col">
               {publicNavigation.map(
                 (item) => {
                   const hasChildren =
@@ -147,7 +151,10 @@ export default function MobileMenu() {
 
                           transition-colors
 
-                          hover:bg-white/50
+                          hover:bg-purple-950
+                          border-b border-slate-200/60
+                          transition-colors duration-200
+                          hover:text-purple-700
                         "
                       >
                         {item.label}
@@ -261,6 +268,7 @@ export default function MobileMenu() {
                   );
                 }
               )}
+              </div>
             </div>
 
             {/* CTA */}

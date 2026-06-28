@@ -1,225 +1,324 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-import {
-  Star,
-  User,
-} from "@phosphor-icons/react";
+import { useEffect, useState, useCallback, useRef } from "react";
+import { Star, CaretLeft, CaretRight } from "@phosphor-icons/react";
 
 export default function TestimonialCarousel({
   testimonials,
 }) {
-  const [activeIndex, setActiveIndex] =
-    useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) =>
-        prev === testimonials.length - 1
-          ? 0
-          : prev + 1
-      );
-    }, 5000);
+  const goTo = useCallback((index) => {
+    setActiveIndex(index);
+  }, []);
 
-    return () =>
-      clearInterval(interval);
+  const goToPrev = useCallback(() => {
+    setActiveIndex((prev) => 
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
   }, [testimonials.length]);
 
-  const active =
-    testimonials[activeIndex];
+  const goToNext = useCallback(() => {
+    setActiveIndex((prev) => 
+      prev === testimonials.length - 1 ? 0 : prev + 1
+    );
+  }, [testimonials.length]);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    intervalRef.current = setInterval(() => {
+      goToNext();
+    }, 6000); // 6 seconds — slow and comfortable
+
+    return () => clearInterval(intervalRef.current);
+  }, [isPaused, goToNext]);
+
+  const handleManualNav = (action) => {
+    setIsPaused(true);
+    action();
+    // Resume auto-play after 10 seconds of inactivity
+    clearTimeout(intervalRef.current);
+    intervalRef.current = setTimeout(() => setIsPaused(false), 10000);
+  };
 
   return (
-    <div className="mx-auto max-w-5xl">
-      <div
-        className="
-          rounded-[40px]
-
-          border
-          border-white/20
-
-          bg-white/10
-
-          p-8
-
-          backdrop-blur-md
-
-          lg:p-12
-        "
-      >
-        {/* Stars */}
-
-        <div
+    <div 
+      className="mx-auto max-w-5xl"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={() => setIsPaused(true)}
+    >
+      <div className="relative">
+        {/* Left Chevron */}
+        <button
+          type="button"
+          onClick={() => handleManualNav(goToPrev)}
           className="
-            mb-6
+            absolute
+            left-0
+            top-1/2
+            z-10
 
-            flex
-            gap-2
+            -translate-y-1/2
+            -translate-x-2
+
+            rounded-full
+
+            bg-white/10
+            p-2
+
+            transition-all
+            hover:bg-white/20
+
+            lg:-translate-x-14
           "
+          aria-label="Previous review"
         >
-          {[...Array(5)].map(
-            (_, index) => (
-              <Star
-                key={index}
-                size={22}
-                weight="fill"
-                className="
-                  text-white
-                "
-              />
-            )
-          )}
-        </div>
+          <CaretLeft size={28} weight="bold" className="text-white" />
+        </button>
 
-        {/* WhatsApp Bubble */}
+        {/* Right Chevron */}
+        <button
+          type="button"
+          onClick={() => handleManualNav(goToNext)}
+          className="
+            absolute
+            right-0
+            top-1/2
+            z-10
+
+            -translate-y-1/2
+            translate-x-2
+
+            rounded-full
+
+            bg-white/10
+            p-2
+
+            transition-all
+            hover:bg-white/20
+
+            lg:translate-x-14
+          "
+          aria-label="Next review"
+        >
+          <CaretRight size={28} weight="bold" className="text-white" />
+        </button>
 
         <div
           className="
-            relative
+            overflow-hidden
 
-            max-w-3xl
+            rounded-[40px]
 
-            rounded-[28px]
+            border
+            border-white/20
 
-            bg-white/15
+            bg-white/10
 
-            p-6
-
-            text-lg
-            leading-8
-
-            text-white
+            p-8
 
             backdrop-blur-md
+
+            lg:p-12
           "
         >
-          "{active.quote}"
-
-          <div
-            className="
-              absolute
-
-              -bottom-3
-              left-8
-
-              h-6
-              w-6
-
-              rotate-45
-
-              bg-white/15
-            "
-          />
-        </div>
-
-        {/* User */}
-
-        <div
-          className="
-            mt-10
-
-            flex
-            items-center
-            gap-4
-          "
-        >
-          <div
-            className="
-              flex
-
-              h-12
-              w-12
-
-              items-center
-              justify-center
-
-              rounded-full
-
-              bg-white/15
-
-              text-white
-            "
-          >
-            <User
-              size={22}
-              weight="fill"
-            />
+          {/* Stars */}
+          <div className="mb-6 flex gap-1">
+            {[...Array(5)].map((_, index) => (
+              <Star
+                key={index}
+                size={20}
+                weight="fill"
+                className="text-yellow-400"
+              />
+            ))}
           </div>
 
-          <div>
-            <h3
+          {/* Slow Sliding Track */}
+          <div className="overflow-hidden">
+            <div
               className="
-                font-semibold
-                text-white
+                flex
+                transition-transform
+                duration-700
+                ease-in-out
               "
+              style={{
+                transform: `translateX(-${activeIndex * 100}%)`,
+              }}
             >
-              {active.name}
-            </h3>
+              {testimonials.map((testimonial) => (
+                <div
+                  key={testimonial.id}
+                  className="w-full flex-shrink-0"
+                >
+                  {/* WhatsApp Dialog Bubble */}
+                  <div className="relative max-w-3xl">
+                    <div
+                      className="
+                        relative
 
-            <p
-              className="
-                text-sm
-                text-white/70
-              "
-            >
-              {active.role}
-              {" • "}
-              {active.company}
-            </p>
+                        rounded-[24px]
+
+                        bg-[#dcf8c6]/90
+
+                        p-6
+                        lg:p-8
+
+                        shadow-lg
+                      "
+                    >
+                      <span
+                        className="
+                          absolute
+                          top-3
+                          left-4
+
+                          font-serif
+                          text-5xl
+                          leading-none
+
+                          text-[#FF8C00]
+                        "
+                      >
+                        "
+                      </span>
+
+                      <p
+                        className="
+                          relative
+                          z-10
+
+                          px-4
+
+                          text-lg
+                          italic
+                          leading-8
+
+                          text-slate-800
+                        "
+                      >
+                        {testimonial.quote}
+                      </p>
+
+                      <span
+                        className="
+                          absolute
+                          bottom-1
+                          right-5
+
+                          rotate-180
+
+                          font-serif
+                          text-5xl
+                          leading-none
+
+                          text-[#FF8C00]
+                        "
+                      >
+                        "
+                      </span>
+                    </div>
+
+                    {/* WhatsApp Bubble Tail */}
+                    <div
+                      className="
+                        absolute
+                        -bottom-2
+                        left-8
+
+                        h-4
+                        w-4
+
+                        rotate-45
+
+                        bg-[#dcf8c6]/90
+                      "
+                    />
+                  </div>
+
+                  {/* User Info */}
+                  <div className="mt-10 flex items-center gap-4">
+                    <div
+                      className="
+                        flex
+                        h-12
+                        w-12
+
+                        items-center
+                        justify-center
+
+                        rounded-full
+
+                        bg-white/15
+
+                        text-sm
+                        font-semibold
+                        text-white
+                      "
+                    >
+                      {testimonial.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")
+                        .slice(0, 2)}
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-white">
+                        {testimonial.name}
+                      </h3>
+
+                      <p className="text-sm text-white/70">
+                        {testimonial.role}
+                        {" • "}
+                        {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Avatar Strip */}
-
-        <div
-          className="
-            mt-10
-
-            flex
-            gap-3
-          "
-        >
-          {testimonials.map(
-            (item, index) => (
+          {/* Bullet Indicators */}
+          <div className="mt-8 flex justify-center gap-2">
+            {testimonials.map((_, index) => (
               <button
-                key={item.id}
-                onClick={() =>
-                  setActiveIndex(index)
-                }
+                key={index}
+                type="button"
+                onClick={() => handleManualNav(() => goTo(index))}
                 className={`
-                  flex
-
-                  h-10
-                  w-10
-
-                  items-center
-                  justify-center
-
                   rounded-full
-
                   transition-all
+                  duration-300
 
                   ${
                     activeIndex === index
                       ? `
+                        h-2.5
+                        w-8
+
                         bg-yellow-400
-                        text-slate-950
-                        scale-110
                       `
                       : `
-                        bg-white/15
-                        text-white
+                        h-2.5
+                        w-2.5
+
+                        bg-white/30
+
+                        hover:bg-white/50
                       `
                   }
                 `}
-              >
-                <User
-                  size={18}
-                  weight="fill"
-                />
-              </button>
-            )
-          )}
+                aria-label={`Go to review ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

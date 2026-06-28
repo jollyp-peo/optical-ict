@@ -5,7 +5,7 @@ export default function PageWrapper({
     <main
       className="
         min-h-screen
-        bg-white
+        bg-slate-300
       "
     >
       {children}

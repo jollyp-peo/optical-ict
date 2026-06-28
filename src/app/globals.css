@@ -5,81 +5,48 @@
 ========================== */
 
 :root {
-  
-  .dark {
-    --bg-primary: #020617;
-    --bg-secondary: #0f172a;
-    --bg-tertiary: #1e293b;
-
-    --text-primary: #ffffff;
-    --text-secondary: #e2e8f0;
-    --text-muted: #94a3b8;
-
-    --border-primary: #334155;
-    --border-secondary: #475569;
-  }
-
-  /* Brand */
-
-  --color-primary: #ffd60a;
+  /* Light mode vars */
+  --color-primary: #FF8C00;
   --color-secondary: #a78bfa;
   --color-accent: #38bdf8;
-
-  /* Backgrounds */
-
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --bg-tertiary: #f1f5f9;
-
-  /* Text */
-
   --text-primary: #0f172a;
   --text-secondary: #334155;
   --text-muted: #64748b;
-
-  /* Borders */
-
   --border-primary: #e2e8f0;
   --border-secondary: #cbd5e1;
-
-  /* Radius */
-
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
-
-  /* Shadows */
-
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
-
-  /* Status */
-
   --color-success: #22c55e;
   --color-warning: #facc15;
   --color-danger: #ef4444;
   --color-info: #38bdf8;
-
-  /* Navigation */
-
   --navbar-height: 80px;
-
-  /* Layout */
-
   --container-max: 1440px;
   --section-padding-mobile: 4rem;
   --section-padding-desktop: 6rem;
-
-  /* Z-index */
-
   --z-navbar: 100;
   --z-mobile-menu: 300;
   --z-modal: 500;
   --z-toast: 600;
+}
+
+.dark {
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border-primary: #334155;
+  --border-secondary: #475569;
 }
 
 /* ==========================
@@ -98,15 +65,10 @@ html {
 
 body {
   margin: 0;
-
   background: var(--bg-primary);
-
   color: var(--text-primary);
-
   font-family: Inter, system-ui, sans-serif;
-
   text-rendering: optimizeLegibility;
-
   -webkit-font-smoothing: antialiased;
 }
 
@@ -115,11 +77,18 @@ img {
   display: block;
 }
 
+/* CRITICAL FIX FOR iOS SAFARI */
 button,
+a,
+[role="button"],
+label,
 input,
 textarea,
 select {
   font: inherit;
+  cursor: pointer;           /* iOS Safari requires this for clicks to fire */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 a {

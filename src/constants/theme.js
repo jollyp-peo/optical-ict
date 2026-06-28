@@ -1,6 +1,6 @@
 export const theme = {
   brand: {
-    name: "Optimal ICT Solutions",
+    name: "Optimal ICT Productive Tech",
 
     colors: {
       primary: "#FFD60A",
@@ -206,7 +206,7 @@ export const theme = {
   ui: {
     button: {
       primary: `
-      bg-[#FFD60A]
+      bg-[#FF8C00]
       text-slate-900
     
       hover:-translate-y-0.5
@@ -234,6 +234,16 @@ export const theme = {
       duration-300
       `,
       ghost: "bg-transparent text-slate-900 hover:bg-slate-100",
+      main: `
+      bg-purple-600
+      text-white
+      hover:-translate-y-0.5
+      hover:shadow-xl
+      hover:brightness-95
+    
+      transition-all
+      duration-300
+      `,
     },
 
     badge: {
