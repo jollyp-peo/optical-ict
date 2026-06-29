@@ -1,160 +1,136 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-import {
-  CaretDown,
-} from "@phosphor-icons/react";
+import { publicNavigation } from "@/constants";
 
-import {
-  publicNavigation,
-} from "@/constants";
+export default function NavLinks() {
+  const pathname = usePathname();
 
-export default function Links() {
   return (
     <nav
       className="
         hidden
         items-center
-        gap-8
+        gap-1
+
         lg:flex
       "
+      aria-label="Main navigation"
     >
       {publicNavigation.map((item) => {
-        const hasChildren =
-          item.children?.length;
+        const isActive = pathname === item.href;
 
-        if (!hasChildren) {
+        // Parent item with children — no href, render label + dropdown
+        if (item.children && !item.href) {
           return (
-            <Link
+            <div
               key={item.label}
-              href={item.href}
-              className="
-                text-sm
-                font-medium
-
-                text-slate-900
-
-                transition-colors
-
-                hover:text-slate-950
-              "
+              className="group relative"
             >
-              {item.label}
-            </Link>
+              <button
+                type="button"
+                className="
+                  rounded-lg
+                  px-4
+                  py-2
+                  text-sm
+                  font-medium
+                  text-white
+                  transition-colors
+                  duration-200
+                  hover:text-yellow-600
+                "
+              >
+                {item.label}
+              </button>
+            {/* company children */}
+              <div
+                className="
+                  invisible
+                  absolute
+                  left-0
+                  top-full
+                  mt-2
+                  w-56
+                  rounded-xl
+                  border
+                  border-slate-200
+                  bg-purple-950
+                  p-2
+                  opacity-0
+                  shadow-lg
+                  transition-all
+                  duration-200
+                  group-hover:visible
+                  group-hover:opacity-100
+                "
+              >
+                {item.children.map((child) => (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    className="
+                      block
+                      rounded-lg
+                      px-4
+                      py-2.5
+                      text-sm
+                      font-medium
+                      text-slate-700
+                      transition-colors
+                      hover:bg-yellow-50
+                      hover:text-yellow-700
+                    "
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           );
         }
 
+        // Regular link
         return (
-          <div
+          <Link
             key={item.label}
-            className="
-              group
+            href={item.href}
+            className={`
               relative
-            "
+              rounded-lg
+              px-4
+              py-2
+              text-sm
+              font-medium
+              transition-colors
+              duration-200
+              ${isActive
+                ? "text-yellow-600"
+                : "text-slate-700 hover:text-yellow-600"
+              }
+            `}
+            style={{
+              color: isActive ? "var(--color-primary)" : undefined,
+            }}
           >
-            <button
-              className="
-                flex
-                items-center
-                gap-1
-
-                text-sm
-                font-medium
-
-                text-slate-700
-
-                transition-colors
-
-                hover:text-slate-950
-              "
-            >
-              {item.label}
-
-              <CaretDown
-                size={14}
+            {item.label}
+            {isActive && (
+              <span
                 className="
-                  transition-transform
-
-                  group-hover:rotate-180
+                  absolute
+                  bottom-0
+                  left-1/2
+                  h-0.5
+                  w-4
+                  -translate-x-1/2
+                  rounded-full
                 "
+                style={{ backgroundColor: "var(--color-primary)" }}
               />
-            </button>
-
-            {/* Dropdown */}
-
-            <div
-              className="
-                invisible
-
-                absolute
-                left-0
-                top-full
-
-                z-50
-
-                w-72
-
-                translate-y-4
-
-                rounded-3xl
-
-                border
-                border-slate-900
-
-                bg-white/95
-                text-slate-950
-
-                p-3
-
-                opacity-0
-
-                shadow-xl
-
-                backdrop-blur-xl
-
-                transition-all
-                duration-200
-
-                group-hover:visible
-                group-hover:translate-y-2
-                group-hover:opacity-100
-              "
-            >
-              <div
-                className="
-                  flex
-                  flex-col
-                "
-              >
-                {item.children.map(
-                  (child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      className="
-                        rounded-2xl
-
-                        px-4
-                        py-3
-
-                        text-sm
-
-                        text-slate-700
-
-                        transition-colors
-
-                        hover:bg-purple-500
-                        hover:text-purple-700
-                      "
-                    >
-                      {child.label}
-                    </Link>
-                  )
-                )}
-              </div>
-            </div>
-          </div>
+            )}
+          </Link>
         );
       })}
     </nav>

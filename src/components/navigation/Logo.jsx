@@ -27,6 +27,7 @@ export default function Logo() {
             block
             text-m
             font-semibold
+            text-white
           "
         >
           Optimal ICT
@@ -35,7 +36,7 @@ export default function Logo() {
         <span
           className="
             text-sm
-            text-slate-900
+            text-[#FFA500]
           "
         >
           Productive Tech.
@@ -44,7 +45,7 @@ export default function Logo() {
         <span
           className="
             text-sm
-            text-orange-950
+            text-white
           "
         >
           RC 3658997. 

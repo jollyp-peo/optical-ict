@@ -6,7 +6,7 @@ export const publicNavigation = [
 
   {
     label: "Services",
-    href: "#services",
+    href: "/services",
   },
 
   {

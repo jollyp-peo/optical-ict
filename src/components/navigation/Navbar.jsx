@@ -11,7 +11,6 @@ import Button from "@/components/ui/Button";
 import BookButton from "@/features/booking/components/BookButton";
 
 export default function Navbar() {
-
   return (
     <header
       className="
@@ -22,10 +21,13 @@ export default function Navbar() {
         border-b
         border-slate-200/80
 
-        bg-[var(--color-secondary)]/80
-
-        backdrop-blur-xl
+        navbar-backdrop
       "
+      style={{
+        backgroundColor: "var(--navbar-bg)",
+        // backdropFilter: "blur(24px)",
+        // WebkitBackdropFilter: "blur(24px)",
+      }}
     >
       <Container>
         <div
@@ -55,7 +57,7 @@ export default function Navbar() {
               Login
             </Button>
 
-            <BookButton bookingType="REPAIR"  variant="primary">
+            <BookButton bookingType="REPAIR" variant="primary">
               Book Repair
             </BookButton>
           </div>

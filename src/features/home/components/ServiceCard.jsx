@@ -56,11 +56,11 @@ export default function ServiceCard({
           {title}
         </h3>
 
-        <p className="mt-3 text-sm leading-7 text-slate-600">
+        <p className="mt-3 text-sm leading-7 text-slate-950">
           {shortDescription}
         </p>
 
-        <p className="mt-3 text-sm leading-7 text-slate-600">
+        <p className="mt-3 text-sm leading-7 text-slate-950">
           {description}
         </p>
 
@@ -70,7 +70,7 @@ export default function ServiceCard({
             {benefits.slice(0, 3).map((benefit) => (
               <li
                 key={benefit}
-                className="flex items-center gap-3 text-sm text-slate-600"
+                className="flex items-center gap-3 text-sm text-slate-950"
               >
                 <span className="h-2 w-2 rounded-full bg-purple-500" />
                 {benefit}

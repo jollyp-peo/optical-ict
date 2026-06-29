@@ -5,7 +5,6 @@
 ========================== */
 
 :root {
-  /* Light mode vars */
   --color-primary: #FF8C00;
   --color-secondary: #a78bfa;
   --color-accent: #38bdf8;
@@ -36,6 +35,9 @@
   --z-mobile-menu: 300;
   --z-modal: 500;
   --z-toast: 600;
+  
+  /* Navbar specific - solid color with opacity as separate var */
+  --navbar-bg: rgba(167, 139, 250, 0.8);
 }
 
 .dark {
@@ -47,6 +49,7 @@
   --text-muted: #94a3b8;
   --border-primary: #334155;
   --border-secondary: #475569;
+  --navbar-bg: rgba(15, 23, 42, 0.8);
 }
 
 /* ==========================
@@ -61,20 +64,23 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 /* CRITICAL FIX FOR iOS SAFARI */
@@ -86,7 +92,7 @@ input,
 textarea,
 select {
   font: inherit;
-  cursor: pointer;           /* iOS Safari requires this for clicks to fire */
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
@@ -94,6 +100,16 @@ select {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* ==========================
+   NAVBAR BACKDROP FALLBACK
+========================== */
+
+@supports not (backdrop-filter: blur(24px)) {
+  .navbar-backdrop {
+    background: var(--navbar-bg-solid, var(--navbar-bg)) !important;
+  }
 }
 
 /* ==========================
@@ -106,8 +122,15 @@ a {
     var(--color-primary),
     var(--color-secondary)
   );
-
   -webkit-background-clip: text;
-
+  background-clip: text;
   color: transparent;
+}
+
+/* Fallback for browsers without background-clip:text */
+@supports not (-webkit-background-clip: text) {
+  .text-gradient {
+    background: none;
+    color: var(--color-primary);
+  }
 }
