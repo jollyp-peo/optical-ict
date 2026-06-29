@@ -1,5 +1,5 @@
 export const images = {
-  logo: "/images/logo.svg",
+  logo: "/images/optimal.logo.webp",
 
   hero: {
     light: "/images/hero/hero-main.webp",

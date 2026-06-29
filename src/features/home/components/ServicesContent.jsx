@@ -46,11 +46,11 @@ export default function ServicesContent() {
         <ServicesShowcase services={servicesPreview} />
       </div>
 
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <Link href="/services">
           <Button size="lg">Explore Services</Button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

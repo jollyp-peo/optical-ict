@@ -6,7 +6,7 @@ import { getContactsService } from "../services/contacts.service";
 
 export function useGetContacts() {
   return useQuery({
-    queryKey: ["contact"],
+    queryKey: ["contacts"],
     queryFn: getContactsService,
   });
 }

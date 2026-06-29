@@ -10,7 +10,7 @@ export function normalizeBookingArray(response) {
 export function normalizeContactArray(response) {
   if (Array.isArray(response)) return response;
   if (response?.items && Array.isArray(response.items)) return response.items;
-  if (response?.contact && Array.isArray(response.contact)) return response.contact;
+  if (response?.contacts && Array.isArray(response.contacts)) return response.contacts;
   if (response?.data && Array.isArray(response.data)) return response.data;
   return [];
 }

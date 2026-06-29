@@ -16,7 +16,7 @@ export const BOOKING_STATUSES = [
 ];
 
 export const CONTACT_STATUSES = [
-  { value: "PENDING", label: "Pending" },
-  { value: "IN_PROGRESS", label: "In Progress" },
-  { value: "RESOLVED", label: "Resolved" },
+  { value: "NEW", label: "new" },
+  { value: "CONTACTED", label: "contacted" },
+  { value: "CLOSED", label: "closed" },
 ];

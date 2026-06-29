@@ -23,37 +23,18 @@ export default function BookingModal() {
     }
   }, [isOpen]);
 
-  // const handleSubmit = useCallback(
-  //   (data) => {
-  //     mutate(data, {
-  //       onSuccess: (response) => {
-  //         setSuccessData(response);
-  //       },
-  //     });
-  //   },
-  //   [mutate]
-  // );
-
   const handleSubmit = useCallback(
     (data) => {
-      console.log("SUBMITTING", JSON.stringify(data, null, 2));
 
       mutate(data, {
         onSuccess: (response) => {
           setSuccessData(response);
         },
-        onError: (error) => {
-          console.log(
-            "FIELD ERRORS",
-            error.response?.data?.errors?.fieldErrors,
-          );
-
-          console.log("FULL ERROR", error.response?.data);
-        },
       });
     },
     [mutate],
   );
+
   const handleClose = useCallback(() => {
     closeBooking();
     setSuccessData(null);
