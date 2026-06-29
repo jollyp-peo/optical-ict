@@ -1,11 +1,12 @@
 import { siteConfig } from "@/config/site";
 import { env } from "@/config/env";
+import { images } from "@/constants";
 
 export function createMetadata({
   title,
   description,
   keywords = [],
-  image = "/og/default-og.jpg",
+  image = `/${images.og}`,
   canonical = "",
   noIndex = false,
 }) {

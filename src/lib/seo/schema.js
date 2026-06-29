@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { env } from "@/config/env";
+import { images } from "@/constants";
 
 const websiteUrl = env.SITE_URL;
 
@@ -15,7 +16,7 @@ export function organizationSchema() {
 
     url: websiteUrl,
 
-    logo: `${websiteUrl}/logo.png`,
+    logo: `${websiteUrl}/${images.logo}`,
 
     email:
       siteConfig.company.email,
@@ -185,7 +186,7 @@ export function articleSchema({
       logo: {
         "@type": "ImageObject",
 
-        url: `${websiteUrl}/logo.png`,
+        url: `${websiteUrl}/${images.logo}`,
       },
     },
   };

@@ -1,6 +1,8 @@
 export const images = {
   logo: "/images/optimal.logo.webp",
 
+  og:"/images/brand/og/webp",
+
   hero: {
     light: "/images/hero/hero-main.webp",
 

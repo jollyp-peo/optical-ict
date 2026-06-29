@@ -33,7 +33,7 @@ export const publicNavigation = [
   },
 
   {
-    label: "Repair Tracking",
+    label: "Tracking",
     href: "/tracking",
     
   },
