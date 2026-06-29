@@ -14,7 +14,7 @@ export const siteConfig = {
 
     founded: "2018",
 
-    email: "support@optimalict.com.ng",
+    email: "info@optimalict.com.ng",
 
     supportEmail: "help@optimalict.com.ng",
 
@@ -26,7 +26,7 @@ export const siteConfig = {
 
     address: {
       street: "12 Saka Tinubu Street",
-      city: "Lagos",
+      city: "Victoria Island",
       state: "Lagos",
       country: "Nigeria",
       postalCode: "101241",

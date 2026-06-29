@@ -224,7 +224,7 @@ export default function Modal({
                             p-2
 
                             transition
-
+                            bg-purple-900
                             hover:bg-slate-100
                           "
                         >
