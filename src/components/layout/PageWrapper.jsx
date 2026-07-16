@@ -1,5 +1,6 @@
 
-import { WhatsAppButton } from "@/features/whatsapp";export default function PageWrapper({
+import { WhatsAppButton } from "@/features/whatsapp";
+export default function PageWrapper({
   children,
 }) {
   return (

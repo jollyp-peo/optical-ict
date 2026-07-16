@@ -4,7 +4,7 @@ export const images = {
   og:"/images/brand/og/webp",
 
   hero: {
-    light: "/images/hero/hero-main.webp",
+    light: "/images/hero/hero-image.webp",
 
     dark: "/images/hero/hero-dark.webp",
   },

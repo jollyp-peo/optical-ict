@@ -42,7 +42,7 @@ export default function TrustedClientsSection() {
           lg:grid-cols-6
         "
       >
-        {trustedBrands.map((brand) => (
+        {trustedBrands && trustedBrands.map((brand) => (
           <div
             key={brand.name}
             className="

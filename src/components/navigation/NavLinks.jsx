@@ -80,8 +80,8 @@ export default function NavLinks() {
                       font-medium
                       text-slate-700
                       transition-colors
-                      hover:bg-yellow-50
-                      hover:text-yellow-700
+                      hover:bg-yellow-400
+                      hover:text-black
                     "
                   >
                     {child.label}

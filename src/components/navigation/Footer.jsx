@@ -111,7 +111,10 @@ export default function Footer() {
                 />
               </Link>
 
-              <Link href="#">
+              <Link href="https://www.linkedin.com/in/optimal-ict-productive-tech-1ab0b2207"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                 <LinkedinLogo
                   size={24}
                   className="text-slate-400 hover:text-yellow-400"

@@ -14,7 +14,7 @@ export default function HomePage() {
     <>
       <HeroSection />
 
-      <TrustedClientsSection />
+      {/* <TrustedClientsSection /> */}
 
       <ServicesSection />
 

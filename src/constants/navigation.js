@@ -10,8 +10,8 @@ export const publicNavigation = [
   },
 
   {
-    label: "Projects",
-    href: "#projects",
+    label: "Products",
+    href: "/products",
   },
 
   {

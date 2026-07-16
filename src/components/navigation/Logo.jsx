@@ -41,15 +41,6 @@ export default function Logo() {
         >
           Productive Tech.
         </span>
-        <br></br>
-        <span
-          className="
-            text-sm
-            text-white
-          "
-        >
-          RC 3658997. 
-        </span>
       </div>
     </Link>
   );

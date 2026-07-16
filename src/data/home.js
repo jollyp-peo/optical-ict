@@ -1,10 +1,10 @@
 export const heroContent = {
   eyebrow: "Trusted Repairs & Digital Solutions",
 
-  title: "Laptops, Phones & Software. Repaired & Built by Experts",
+  title: "Laptops, Phones & Software. We handle your Tech and grow your Business.",
 
   description:
-    "We repair laptops, smartphones, and tablets with fast turnaround and certified parts. We also build custom websites, mobile apps, and provide full IT support from cloud setup and networking to ongoing managed services for individuals and businesses ready to grow.",
+    "We repair laptops, smartphones, tablets with fast turnaround and certified parts. We Empowers Businesses Through Intelligent Technology We simplify technology, solve complex ICT challenges, and deliver reliable solutions that help organizations grow with confidence.",
 
   primaryCta: {
     label: "Book Repair",
@@ -22,31 +22,31 @@ export const heroContent = {
   ],
 };
 
-export const trustedBrands = [
-  {
-    name: "Microsoft",
-  },
+// export const trustedBrands = [
+//   {
+//     name: "Microsoft",
+//   },
 
-  {
-    name: "AWS",
-  },
+//   {
+//     name: "AWS",
+//   },
 
-  {
-    name: "Cisco",
-  },
+//   {
+//     name: "Cisco",
+//   },
 
-  {
-    name: "Node.js",
-  },
+//   {
+//     name: "Node.js",
+//   },
 
-  {
-    name: "Flutter",
-  },
+//   {
+//     name: "Flutter",
+//   },
 
-  {
-    name: "PostgreSQL",
-  },
-];
+//   {
+//     name: "PostgreSQL",
+//   },
+// ];
 
 export const servicesPreview = [
   {
