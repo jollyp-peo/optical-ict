@@ -22,31 +22,31 @@ export const heroContent = {
   ],
 };
 
-// export const trustedBrands = [
-//   {
-//     name: "Microsoft",
-//   },
+export const trustedBrands = [
+  {
+    name: "Microsoft",
+  },
 
-//   {
-//     name: "AWS",
-//   },
+  {
+    name: "AWS",
+  },
 
-//   {
-//     name: "Cisco",
-//   },
+  {
+    name: "Cisco",
+  },
 
-//   {
-//     name: "Node.js",
-//   },
+  {
+    name: "Node.js",
+  },
 
-//   {
-//     name: "Flutter",
-//   },
+  {
+    name: "Flutter",
+  },
 
-//   {
-//     name: "PostgreSQL",
-//   },
-// ];
+  {
+    name: "PostgreSQL",
+  },
+];
 
 export const servicesPreview = [
   {
