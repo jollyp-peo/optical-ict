@@ -45,6 +45,21 @@ export const services = [
     cta: "Book File Recovery",
   },
   {
+    id: "parts-procurement",
+    title: "Parts Procurement",
+    category: "Procurement",
+    bookingType: "procurement",
+    serviceType: "parts",
+    shortDescription:
+      "Sourcing and supply of genuine and compatible replacement parts for computers, mobile devices, and IT equipment.",
+    benefits: [
+      "Genuine OEM Parts",
+      "Compatible Third-Party Options",
+      "Bulk Ordering Available",
+    ],
+    cta: "Request Parts Quote",
+  },
+  {
     id: "web-development",
     title: "Website Development",
     category: "Development",
