@@ -3,6 +3,7 @@ import SectionEyebrow from "./SectionEyebrow";
 export default function SectionHeader({
   eyebrow,
   title,
+  shortDescription,
   description,
 
   centered = false,
@@ -11,6 +12,7 @@ export default function SectionHeader({
 
   eyebrowClassName = "",
   titleClassName = "",
+  shortDescriptionClassName = "",
   descriptionClassName = "",
 }) {
   return (
@@ -50,6 +52,23 @@ export default function SectionHeader({
       >
         {title}
       </h2>
+      {shortDescription && (
+        <p
+          className={`
+            mt-4
+
+            text-lg
+            leading-8
+
+            text-purple-950
+
+            ${shortDescriptionClassName}
+          `}
+        >
+          {shortDescription}
+        </p>
+      )}
+
 
       {description && (
         <p

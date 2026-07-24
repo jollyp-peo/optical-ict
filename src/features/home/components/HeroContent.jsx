@@ -1,6 +1,8 @@
 "use client";
 
 import SectionHeader from "@/components/ui/SectionHeader";
+import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 import BookButton from "@/features/booking/components/BookButton";
 
@@ -12,6 +14,7 @@ export default function HeroContent() {
       <SectionHeader
         eyebrow={heroContent.eyebrow}
         title={heroContent.title}
+        shortDescription={heroContent.shortDescription}
         description={heroContent.description}
       />
 
@@ -25,18 +28,13 @@ export default function HeroContent() {
       >
         {/* Primary CTA */}
 
-        <BookButton
-          bookingType="REPAIR"
-        >
-          {heroContent.primaryCta.label}
-        </BookButton>
+        <Link href="/contact">
+          <Button size="md">{heroContent.primaryCta.label}</Button>
+        </Link>
 
         {/* Secondary CTA */}
 
-        <BookButton
-          bookingType="SERVICE" 
-          variant="outline"
-        >
+        <BookButton bookingType="REPAIR" variant="outline">
           {heroContent.secondaryCta.label}
         </BookButton>
       </div>

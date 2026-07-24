@@ -21,8 +21,19 @@ export default function ServicesContent() {
           lg:text-5xl
         "
       >
-        Everything You Need To Keep Technology Working.
+        Technology That Keeps Your Business Moving
       </h2>
+
+      <p
+        className="
+          mt-6
+          text-lg
+          leading-8
+          text-purple-950
+        "
+      >
+        Managed IT Services | 24/7 Help Desk | Cybersecurity | Cloud | Networking | Hardware Support.
+      </p>
 
       <p
         className="
@@ -32,8 +43,7 @@ export default function ServicesContent() {
           text-slate-600
         "
       >
-        From repairs and support to software, networking, websites and mobile
-        apps.
+        Optimal ICT Productive Tech helps businesses stay productive with reliable IT support, secure infrastructure, and proactive technology management.
       </p>
 
       <div

@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import Container from "@/components/layout/Container";
 
 import Logo from "./Logo";
@@ -8,7 +10,7 @@ import MobileMenu from "./MobileMenu";
 
 import Button from "@/components/ui/Button";
 
-import BookButton from "@/features/booking/components/BookButton";
+// import BookButton from "@/features/booking/components/BookButton";
 
 export default function Navbar() {
   return (
@@ -57,9 +59,9 @@ export default function Navbar() {
               Login
             </Button>
 
-            <BookButton bookingType="REPAIR" variant="primary">
-              Book Repair
-            </BookButton>
+            <Link href="/contact">
+          <Button size="md">Request IT Support</Button>
+        </Link>
           </div>
         </div>
       </Container>

@@ -1,24 +1,26 @@
 export const heroContent = {
   eyebrow: "Trusted Repairs & Digital Solutions",
 
-  title: "Laptops, Phones & Software. We handle your Tech and grow your Business.",
+  title: "Africa’s Trusted Business Technology Partner",
+  shortDescription:"24/7 IT Help Desk • Managed IT Services • Cybersecurity • Cloud Solutions • Network Infrastructure.",
 
   description:
-    "We repair laptops, smartphones, tablets with fast turnaround and certified parts. We Empowers Businesses Through Intelligent Technology We simplify technology, solve complex ICT challenges, and deliver reliable solutions that help organizations grow with confidence.",
+    "We Empower Businesses Through Intelligent Technology We simplify technology, solve complex ICT challenges, and deliver reliable solutions that help organizations grow with confidence. We repair laptops, smartphones, tablets with fast turnaround and certified parts.",
 
   primaryCta: {
-    label: "Book Repair",
+    label: "Talk to an IT Expert",
   },
 
   secondaryCta: {
-    label: "Get a Quote",
+    label: "Book Repair Service",
   },
 
   trustIndicators: [
-    "Same-Day Repairs",
-    "Free Pickup & Delivery",
-    "Web, App & IT Experts",
-    "Warranty Included",
+    "99% Customer Satisfaction",
+    "Fast Response Times",
+    "Corporate IT Support",
+    "Certified Engineers",
+    "Serving Businesses Across Nigeria",
   ],
 };
 
@@ -52,7 +54,7 @@ export const servicesPreview = [
   {
     id: "laptop-repair",
     title: "Laptop Repair",
-    shortDescription: "Expert repairs for MacBook, HP, Dell, Lenovo and all major brands — diagnostics, upgrades and hardware fixes.",
+    shortDescription: "Expert repairs for MacBook, HP, Dell, Lenovo and all major brands  diagnostics, upgrades and hardware fixes.",
 
     image: "/images/services/laptop-repair.webp",
 
@@ -173,7 +175,7 @@ export const processSteps = [
     number: "01",
     title: "Book Online or Request a Quote",
     description:
-      "For repairs, simply book through our website — tell us your device, describe the issue and pick a convenient time. For IT projects, web development or mobile apps, fill out a brief project request and our team will reach out within hours to understand your goals.",
+      "For repairs, simply book through our website  tell us your device, describe the issue and pick a convenient time. For IT projects, web development or mobile apps, fill out a brief project request and our team will reach out within hours to understand your goals.",
   },
   {
     number: "02",
@@ -199,13 +201,13 @@ export const whyChooseUs = {
   title: "Why Businesses & Individuals Trust Us With Their Tech",
 
   description:
-    "From emergency repairs to enterprise software, we treat every project with the same commitment: fast response times, honest communication, and work that lasts. no hidden fees — just reliable technology solutions that keep you moving forward.",
+    "From emergency repairs to enterprise software, we treat every project with the same commitment: fast response times, honest communication, and work that lasts. no hidden fees  just reliable technology solutions that keep you moving forward.",
 
   features: [
     {
       title: "Same-Day Diagnostics & Speedy Repairs",
       description:
-        "We know downtime costs money. That is why we prioritize rapid turnaround — most diagnostics are completed within hours and standard repairs often ship back the same day. For urgent business needs, we offer express service lanes to get you operational again without delay.",
+        "We know downtime costs money. That is why we prioritize rapid turnaround  most diagnostics are completed within hours and standard repairs often ship back the same day. For urgent business needs, we offer express service lanes to get you operational again without delay.",
       icon: "lightning",
     },
     {
@@ -217,7 +219,7 @@ export const whyChooseUs = {
     {
       title: "Certified Technicians & Developers",
       description:
-        "Our team is not just experienced — they are certified. From Apple and Windows hardware specialists to full-stack developers and network engineers, every person touching your project has proven expertise and undergoes continuous training on the latest technology.",
+        "Our team is not just experienced  they are certified. From Apple and Windows hardware specialists to full-stack developers and network engineers, every person touching your project has proven expertise and undergoes continuous training on the latest technology.",
       icon: "shield",
     },
     {
@@ -229,13 +231,13 @@ export const whyChooseUs = {
     {
       title: "Warranty & Post-Project Support",
       description:
-        "Every repair carries a warranty on parts and labor. Every software project includes a post-launch support window. We do not disappear after delivery — our team remains available for maintenance, updates, troubleshooting and scaling as your needs grow.",
+        "Every repair carries a warranty on parts and labor. Every software project includes a post-launch support window. We do not disappear after delivery  our team remains available for maintenance, updates, troubleshooting and scaling as your needs grow.",
       icon: "support",
     },
     {
       title: "Quality Work, Guaranteed",
       description:
-        "We use genuine or OEM-grade components for repairs and follow industry best practices for code, security and infrastructure. If something is not right, we make it right. Our reputation is built on repeat customers and referrals — and we intend to keep it that way.",
+        "We use genuine or OEM-grade components for repairs and follow industry best practices for code, security and infrastructure. If something is not right, we make it right. Our reputation is built on repeat customers and referrals  and we intend to keep it that way.",
       icon: "award",
     },
   ],
@@ -447,44 +449,57 @@ export const testimonials = [
 export const faqs = [
   {
     question:
-      "How long do most repairs take?",
+      "What is included in your Managed IT Services?",
     answer:
-      "Most device repairs are completed within 24 to 72 hours depending on complexity and parts availability.",
+      "Our Managed IT Services cover proactive system monitoring, preventive maintenance, patch management, vendor coordination, and strategic IT planning. We act as your dedicated technology partner, ensuring your infrastructure remains secure, up-to-date, and aligned with your business goals.",
   },
-
   {
     question:
-      "Do you offer device pickup and delivery?",
+      "How does your 24/7 Help Desk support work?",
     answer:
-      "Yes. We provide pickup and delivery services for customers within our service coverage areas.",
+      "Our Help Desk is available around the clock via remote support and scheduled on-site visits. We use structured ticketing and incident management with defined response SLAs, so your team receives expert assistance exactly when it's needed.",
   },
-
   {
     question:
-      "Do repairs come with a warranty?",
+      "Can you design and implement network infrastructure for multiple office locations?",
     answer:
-      "Yes. Eligible repairs include service warranties for added peace of mind.",
+      "Absolutely. We design, deploy, and optimize scalable network architectures—including enterprise Wi-Fi, LAN/WAN, and SD-WAN solutions—tailored for single sites or multi-location organizations with seamless connectivity and room for growth.",
   },
-
   {
     question:
-      "Can you develop custom websites and applications?",
+      "What cybersecurity services do you provide?",
     answer:
-      "Absolutely. We build websites, business platforms, e-commerce solutions and mobile applications tailored to your needs.",
+      "We offer end-to-end cybersecurity including threat detection and response, security audits, vulnerability assessments, compliance management, and ongoing monitoring. Our approach is proactive, aiming to identify and neutralize risks before they impact your operations.",
   },
-
   {
     question:
-      "Do you provide ongoing IT support?",
+      "Do you assist with cloud migration and ongoing cloud management?",
     answer:
-      "Yes. We offer managed IT services, maintenance plans and ongoing technical support for businesses.",
+      "Yes. We provide end-to-end cloud strategy, seamless migration planning, infrastructure optimization, and ongoing management for public, private, and hybrid cloud environments. We ensure minimal disruption during migration and continuous performance afterward.",
   },
-
   {
     question:
-      "How do I request a quote?",
+      "What physical security solutions do you offer?",
     answer:
-      "You can contact us directly through the website, submit a service request or schedule a consultation.",
+      "We design and integrate CCTV surveillance, access control systems, and remote monitoring solutions. These systems can be unified with your existing IT infrastructure for centralized management and real-time alerts.",
+  },
+  {
+    question:
+      "How do you handle data recovery and business continuity?",
+    answer:
+      "We implement robust backup strategies, disaster recovery planning, and rapid data restoration services. In the event of data loss, corruption, or a security breach, our goal is to minimize downtime and restore business operations quickly.",
+  },
+  {
+    question:
+      "How do your ICT Consultancy, Corporate Training, and IT Procurement services work?",
+    answer:
+      "Our consultancy engagements begin with a technology assessment and roadmap aligned to your business objectives. We then support execution through strategic IT procurement—sourcing hardware, software, and infrastructure at competitive value—and upskill your team with customized corporate training programs, available both on-site and remotely.",
+  },
+  {
+    question:
+      "How do I request a quote or schedule a consultation?",
+    answer:
+      "You can reach out through our website, submit a service inquiry, or book a discovery call. We'll conduct a brief needs assessment and provide a tailored proposal outlining scope, timelines, and investment.",
   },
 ];
 
